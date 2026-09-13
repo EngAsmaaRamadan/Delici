@@ -1,0 +1,30 @@
+ul.circle-indicators li{
+	width: 10px;
+	height: 10px;
+	background-color: #fff;
+}
+
+ul.circle-indicators .active{
+	background-color: var(--main-color);
+}
+
+header #sc_carousel .sc-carousel-item{
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+header #sc_carousel .sc-carousel-item:nth-of-type(1){
+	background-image: url('../images/slider-1.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+header #sc_carousel .sc-carousel-item:nth-of-type(2){
+	background-image: url('../images/slider-2.jpg');
+}
+
+header #sc_carousel .sc-carousel-item:nth-of-type(3){
+	background-image: url('../images/slider-3.jpg');
+}
