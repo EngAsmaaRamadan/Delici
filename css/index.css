@@ -112,3 +112,5 @@ button.button.btn::after{
 button.button.btn:hover::after{
 	bottom: 0%;
 }
+
+/*i think button in prev next is by rotating the div that contain icon*/
