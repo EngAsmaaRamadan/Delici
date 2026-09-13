@@ -43,12 +43,12 @@ header #sc_carousel .sc-carousel-item p{
 	font-size: 20px;
 }
 
-header #sc_carousel .sc-carousel-item button a,
+button.button.btn a,
 header #sc_carousel .sc-carousel-item button i{
 	color: var(--main-color);
 }
 
-header #sc_carousel .sc-carousel-item button a{
+button.button.btn a{
 	letter-spacing: 1.5px;
 }
 
@@ -60,4 +60,55 @@ button.btn{
 
 button.btn:hover{
 	border: 2px solid var(--main-color);
+}
+
+button.button.btn span{
+	}
+
+button.button.btn span a{
+	color: var(--main-color);
+	transition-duration: 1s;
+	position: relative;
+	z-index: 2;
+}
+
+button.button.btn:hover span a{
+	color: #000;
+}
+
+header #sc_carousel .sc-carousel-item button.btn{
+	position: relative;
+	overflow: hidden;
+}
+
+button.btn-check:checked+.btn, button.btn.active, button.btn.show, button.btn:first-child:active, :not(.btn-check)+button.btn:active{
+	border: 2px solid var(--main-color);
+}
+
+button.button.btn::before{
+	top: 100%;
+}
+
+button.button.btn:hover::before{
+	top: 0%;
+}
+
+button.button.btn::before,
+button.button.btn::after{
+	content: "";
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: var(--main-color);
+	left: 0;
+	transition-duration: 1s;
+}
+
+button.button.btn::after{
+	bottom: 100%;
+}
+
+button.button.btn:hover::after{
+	bottom: 0%;
 }
