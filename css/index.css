@@ -12,13 +12,14 @@ header #sc_carousel .sc-carousel-item{
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 header #sc_carousel .sc-carousel-item:nth-of-type(1){
 	background-image: url('../images/slider-1.jpg');
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
 }
 
 header #sc_carousel .sc-carousel-item:nth-of-type(2){
@@ -27,4 +28,36 @@ header #sc_carousel .sc-carousel-item:nth-of-type(2){
 
 header #sc_carousel .sc-carousel-item:nth-of-type(3){
 	background-image: url('../images/slider-3.jpg');
+}
+
+header #sc_carousel .sc-carousel-item h2{
+	font-size: 80px;
+}
+
+header #sc_carousel .sc-carousel-item h2,
+header #sc_carousel .sc-carousel-item p{
+	color: #fff;
+}
+
+header #sc_carousel .sc-carousel-item p{
+	font-size: 20px;
+}
+
+header #sc_carousel .sc-carousel-item button a,
+header #sc_carousel .sc-carousel-item button i{
+	color: var(--main-color);
+}
+
+header #sc_carousel .sc-carousel-item button a{
+	letter-spacing: 1.5px;
+}
+
+button.btn{
+	border: 2px solid var(--main-color);
+    padding: 15px 40px;
+    font-size: 14px;
+}
+
+button.btn:hover{
+	border: 2px solid var(--main-color);
 }

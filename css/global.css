@@ -14,3 +14,13 @@ h5,
 h6{
 	font-family: 'Forum';
 }
+
+.title h6{
+	color: var(--main-color);
+	letter-spacing: 1.5px;
+	font-size: 17px;
+}
+
+.title img{
+	width: 100px;
+}
