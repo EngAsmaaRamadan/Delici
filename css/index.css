@@ -174,4 +174,41 @@ header button.prev:hover i,
 header button.next:hover i{
 	color: #000;
 }
+
+header .BookTable{
+	position: absolute;
+	bottom: 40px;
+	left: 40px;
+	z-index: 2;
+	text-align: center;
+}
+
+header .square-rotate{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 100px;
+	border: 1px solid var(--main-color);
+	background-color: rgba(0, 0, 0, 0.5);
+	animation-name: wheel;
+	animation-timing-function: linear;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+header .book-table-button{
+	background-color: var(--main-color);
+	padding-inline: 28px;
+	position: relative;
+}
+
+header .book-table-button img{
+	width: 40px;
+}
+
+header .book-table-button p{
+	margin-block: 8px 10px;
+	font-size: 12px;
+}
 /*i think button in prev next is by rotating the div that contain icon*/
