@@ -2,16 +2,51 @@ nav img{
 	width: 130px;
 }
 
+nav.scrolledOutHeader{
+	background-color: #202020;
+}
+
 nav .collapse{
 	justify-content: space-around;
 }
 
-nav .navbar-nav li .nav-link{
-	color: #fff;
+nav.navbar .navbar-nav li{
+	padding: 8px;
 }
 
-nav .navbar-nav li .nav-link.active{
+nav.navbar .navbar-nav li .nav-link{
+	color: #fff;
+	padding: 0;
+	position: relative;
+	transition-duration: 0.5s;
+}
+
+nav.navbar .navbar-nav li .nav-link:hover{
+
+}
+
+nav.navbar .navbar-nav li .nav-link.active,
+nav.navbar .navbar-nav li .nav-link:hover{
 	color: var(--main-color);
+}
+
+nav.navbar .navbar-nav li .nav-link::after{
+	content: "";
+	display: block;
+	width: 0%;
+	height: 4px;
+	border-top:1px solid var(--main-color);
+	border-bottom:1px solid var(--main-color);
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+    transform: translateX(-50%);
+    transition-duration: 0.5s;
+}
+
+nav.navbar .navbar-nav li .nav-link.active::after,
+nav.navbar .navbar-nav li .nav-link:hover::after{
+	width: 100%;
 }
 
 nav .animatingLines{
