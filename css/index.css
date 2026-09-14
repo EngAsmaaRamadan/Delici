@@ -67,58 +67,56 @@ header #sc_carousel .sc-carousel-item p{
 	font-size: 20px;
 }
 
-button.button.btn a,
+a.button.btn,
 header #sc_carousel .sc-carousel-item button i{
 	color: var(--main-color);
 }
 
-button.button.btn a{
+a.button.btn{
 	letter-spacing: 1.5px;
+	z-index: 2;
 }
 
-button.btn{
+a.button.btn{
 	border: 2px solid var(--main-color);
     padding: 15px 40px;
     font-size: 14px;
 }
 
-button.btn:hover{
+a.button.btn:hover{
 	border: 2px solid var(--main-color);
 }
 
-button.button.btn span{
-	}
-
-button.button.btn span a{
+a.button.btn span{
 	color: var(--main-color);
 	transition-duration: 1s;
-	position: relative;
 	z-index: 2;
+	cursor: alias;
 }
 
-button.button.btn:hover span a{
+a.button.btn:hover span{
 	color: #000;
 }
 
-header #sc_carousel .sc-carousel-item button.btn{
+header #sc_carousel .sc-carousel-item a.button.btn{
 	position: relative;
 	overflow: hidden;
 }
 
-button.btn-check:checked+.btn, button.btn.active, button.btn.show, button.btn:first-child:active, :not(.btn-check)+button.btn:active{
+.button.btn-check:checked+.btn, .button.btn.active, .button.btn.show, .button.btn:first-child:active, :not(.btn-check)+.button.btn:active{
 	border: 2px solid var(--main-color);
 }
 
-button.button.btn::before{
+a.button.btn::before{
 	top: 100%;
 }
 
-button.button.btn:hover::before{
+a.button.btn:hover::before{
 	top: 0%;
 }
 
-button.button.btn::before,
-button.button.btn::after{
+a.button.btn::before,
+a.button.btn::after{
 	content: "";
 	position: absolute;
 	display: block;
@@ -129,11 +127,11 @@ button.button.btn::after{
 	transition-duration: 1s;
 }
 
-button.button.btn::after{
+a.button.btn::after{
 	bottom: 100%;
 }
 
-button.button.btn:hover::after{
+a.button.btn:hover::after{
 	bottom: 0%;
 }
 
