@@ -1,11 +1,23 @@
+header{
+	position: relative;
+}
+
 ul.circle-indicators li{
 	width: 10px;
 	height: 10px;
 	background-color: #fff;
+	position: absolute;
+	bottom: 10px;
+	right: 20px;
 }
 
 ul.circle-indicators .active{
 	background-color: var(--main-color);
+}
+
+header #sc_carousel{
+	position: relative;
+	height: 100vh;
 }
 
 header #sc_carousel .sc-carousel-item{
@@ -16,6 +28,14 @@ header #sc_carousel .sc-carousel-item{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+header #sc_carousel .sc-carousel-item.active{
+	z-index: 2;
 }
 
 header #sc_carousel .sc-carousel-item:nth-of-type(1){
@@ -113,4 +133,41 @@ button.button.btn:hover::after{
 	bottom: 0%;
 }
 
+header button.prev{
+	left: 30px;
+}
+
+header button.prev,
+header button.next{
+	transform: rotate(45deg);
+	border-radius: 0;
+	padding: 8px 11px;
+	position: absolute;
+	background-color: transparent;
+	border: 1px solid var(--main-color);
+	top: 50%;
+	z-index: 2;
+	transition-duration: 0.5s;
+}
+
+header button.prev:hover,
+header button.next:hover{
+	background-color: var(--main-color);
+}
+
+header button.next{
+	right: 30px;
+}
+
+header button.prev i,
+header button.next i{
+	transform: rotate(-45deg);
+	color: var(--main-color);
+	transition-duration: 0.5s;
+}
+
+header button.prev:hover i,
+header button.next:hover i{
+	color: #000;
+}
 /*i think button in prev next is by rotating the div that contain icon*/
