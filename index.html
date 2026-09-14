@@ -20,7 +20,9 @@
 
 	<header>
 		<div id="sc_carousel">
-			<div class="sc-carousel-item text-center active vh-100">
+			<div class="sc_carousel-inner">
+
+			<div class="sc-carousel-item text-center active vh-100" data-item-index="1">
 				<div class="title mb-4">
 					<h6>DELIGHTFUL EXPERIENCE</h6>
 					<img src="images/separator.svg" alt="separator, title img">
@@ -29,7 +31,7 @@
 				<p class="mb-5">Come with family & feel the joy of mouthwatering food</p>
 				<a class="button btn text-decoration-none" href="#Menu"><span class="position-relative">VIEW OUR MENU</span></a>
 			</div>
-			<div class="sc-carousel-item text-center vh-100">
+			<div class="sc-carousel-item text-center vh-100" data-item-index="2">
 				<div class="title mb-4">
 					<h6>AMAZING & DELICIOUS</h6>
 					<img src="images/separator.svg" alt="separator, title img">
@@ -38,7 +40,7 @@
 				<p class="mb-5">Come with family & feel the joy of mouthwatering food</p>
 				<a class="button btn text-decoration-none" href="#Menu"><span class="position-relative">VIEW OUR MENU</span></a>
 			</div>
-			<div class="sc-carousel-item text-center vh-100">
+			<div class="sc-carousel-item text-center vh-100" data-item-index="3">
 				<div class="title mb-4">
 					<h6>TRADATIONAL & HYGINE</h6>
 					<img src="images/separator.svg" alt="separator, title img">
@@ -47,12 +49,14 @@
 				<p class="mb-5">Come with family & feel the joy of mouthwatering food</p>
 				<a class="button btn text-decoration-none" href="#Menu"><span class="position-relative">VIEW OUR MENU</span></a>
 			</div>
-				<button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
+		</div>
+
+			<button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
 				<button class="next"><i class="fa-solid fa-chevron-right"></i></button>
 			<ul class="circle-indicators list-unstyled d-flex column-gap-2">
-				<li class="active rounded-circle"></li>
-				<li class="rounded-circle"></li>
-				<li class="rounded-circle"></li>
+				<li class="active rounded-circle" data-index="1"></li>
+				<li class="rounded-circle" data-index="2"></li>
+				<li class="rounded-circle" data-index="3"></li>
 			</ul>
 			<div class="BookTable">
 				<div class="square-rotate"></div>

@@ -6,13 +6,14 @@ ul.circle-indicators{
 	position: absolute;
 	bottom: 5px;
 	right: 20px;
-	z-index: 2;
+	z-index: 3;
 }
 
 ul.circle-indicators li{
 	width: 10px;
 	height: 10px;
 	background-color: #fff;
+	cursor: pointer;
 }
 
 ul.circle-indicators .active{
@@ -36,6 +37,7 @@ header #sc_carousel .sc-carousel-item{
 	top: 0;
 	left: 0;
 	width: 100%;
+	z-index: 1;
 }
 
 header #sc_carousel .sc-carousel-item.active{
@@ -148,7 +150,7 @@ header button.next{
 	background-color: transparent;
 	border: 1px solid var(--main-color);
 	top: 50%;
-	z-index: 2;
+	z-index: 3;
 	transition-duration: 0.5s;
 }
 
@@ -177,7 +179,7 @@ header .BookTable{
 	position: absolute;
 	bottom: 40px;
 	left: 40px;
-	z-index: 2;
+	z-index: 3;
 	text-align: center;
 }
 
