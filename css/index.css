@@ -26,7 +26,8 @@ nav.navbar .navbar-nav li .nav-link:hover{
 	color: var(--main-color);
 }
 
-nav.navbar .navbar-nav li .nav-link::after{
+nav.navbar .navbar-nav li .nav-link::after,
+a.phone::after{
 	content: "";
 	display: block;
 	width: 0%;
@@ -41,7 +42,8 @@ nav.navbar .navbar-nav li .nav-link::after{
 }
 
 nav.navbar .navbar-nav li .nav-link.active::after,
-nav.navbar .navbar-nav li .nav-link:hover::after{
+nav.navbar .navbar-nav li .nav-link:hover::after,
+a.phone:hover::after{
 	width: 100%;
 }
 
@@ -242,6 +244,7 @@ header .book-table-button p{
 	background-image: url('../images/bg.png');
 	width: 400px;
 	position: absolute;
+	scroll-behavior: ;
 	top: 0;
 	left: -100%;
 	transition-duration: 1s;
@@ -252,7 +255,14 @@ header .book-table-button p{
 	transition-duration: 1s;
 }
 
-.nav-popup .popupBox i{
+.nav-popup .popupBox .container{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-popup .popupBox i.close{
 	cursor: pointer;
 	position: absolute;
 	right: 13px;
@@ -273,6 +283,11 @@ header .book-table-button p{
     align-items: center;
 }
 
+.nav-popup .popupBox ul{
+	width: 70%;
+    margin: auto;
+}
+
 .nav-popup .popupBox ul .nav-link{
 	transition-duration: 0.5s;
 	color: #fff;
@@ -289,13 +304,12 @@ header .book-table-button p{
 	justify-content: flex-start;
     align-items: center;
     column-gap: 10px;
-    border-top: 1px solid #a7a7a7;
-    border-bottom: 1px solid #a7a7a7;
-    width: 70%;
-    margin: auto;
+    border-top: 1px solid var(--first-color);
+    border-bottom: 1px solid var(--first-color);
+    padding-block: 2px;
 }
 
-.nav-popup .popupBox ul .square{
+.nav-popup .popupBox .square{
 	width: 10px;
 	height: 10px;
 	border: 2px solid var(--main-color);
@@ -303,4 +317,24 @@ header .book-table-button p{
 	animation-timing-function: linear;
 	animation-duration: 10s;
 	animation-iteration-count: infinite;
+}
+
+.nav-popup .popupBox h2{
+	color: #fff;
+}
+
+.nav-popup .popupBox p,
+.nav-popup .popupBox i{
+	color: var(--first-color);
+}
+
+.nav-popup .popupBox p.book{
+	color: #fff;
+	font-size: 18px;
+}
+
+a.phone{
+	color: var(--main-color);
+	position: relative;
+	font-size: 30px;
 }

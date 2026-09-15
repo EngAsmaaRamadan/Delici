@@ -1,5 +1,6 @@
 :root{
 	--main-color:#e4c590;
+	--first-color:#a7a7a7;
 }
 
 body{
@@ -90,6 +91,7 @@ a.button.btn:hover::after{
 	width: 100%;
     height: 100%;
     z-index: 50;
+    overflow-y: auto;
 }
 
 .popup.active{
