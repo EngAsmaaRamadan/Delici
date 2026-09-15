@@ -1,3 +1,7 @@
+nav{
+	z-index: 100;
+}
+
 nav img{
 	width: 130px;
 }
@@ -27,7 +31,8 @@ nav.navbar .navbar-nav li .nav-link:hover{
 }
 
 nav.navbar .navbar-nav li .nav-link::after,
-a.phone::after{
+a.phone::after,
+#AboutUs a::after{
 	content: "";
 	display: block;
 	width: 0%;
@@ -43,7 +48,8 @@ a.phone::after{
 
 nav.navbar .navbar-nav li .nav-link.active::after,
 nav.navbar .navbar-nav li .nav-link:hover::after,
-a.phone:hover::after{
+a.phone:hover::after,
+#AboutUs a:hover::after{
 	width: 100%;
 }
 
@@ -232,6 +238,106 @@ header .book-table-button img{
 header .book-table-button p{
 	margin-block: 8px 10px;
 	font-size: 12px;
+}
+
+#AboutUs{
+	background-color:var(--bg-color);
+	background-image: url('../images/bg.png');
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+}
+
+#AboutUs h2{
+	font-size: 50px;
+}
+
+#AboutUs .right{
+	right: 0;
+	top: 0;
+	transform: translateY(-20px);
+}
+
+#AboutUs .right,
+#AboutUs .left{
+	position: absolute;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-direction: alternate;
+	animation-duration: 2s;
+}
+
+#AboutUs .left{
+	left: 0;
+	bottom: 0;
+	transform: translateY(-10px);
+	animation-name: AboutMovingLeft;
+}
+
+#AboutUs .part .product{
+	position: relative;
+	overflow: hidden;
+}
+
+#AboutUs a{
+	color: var(--main-color);
+	position: relative;
+}
+
+#AboutUs .part:nth-of-type(2) .item{
+	margin-inline: -15px;
+}
+
+#AboutUs .part .product::before{
+	content: "";
+	display: block;
+	width: 40%;
+	height: 95%;
+	background-image: url('../images/pattern-8.svg');
+	background-position: bottom;
+	background-size: cover;
+    background-repeat: no-repeat;
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateY(0deg);
+    transition-duration: 1s;
+}
+
+#AboutUs .part .product:hover::before{
+	transform: translate(-50%, -50%) rotateY(180deg);
+}
+
+#AboutUs .part .product::after{
+	content: "";
+    position: absolute;
+    top: -70%;
+    left: -45%;
+    display: block;
+    width: 30%;
+    height: 150%;
+    background: linear-gradient(to right,rgba(0,0,0,0.1) 0% ,rgba(255,255,255,0.5) 100%);
+    transform: rotate(45deg);
+    transition: 0.5s linear;
+    z-index: 2;
+}
+
+#AboutUs .part .product:hover::after{
+	left: 150%;
+	top: 60%;
+}
+
+#AboutUs .part .product-item{
+	width: 100%;
+	position: relative;
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+}
+
+#AboutUs .part .product-item img{
+	width: 280px;
+    height: 330px;
 }
 
 .popup.nav-popup{
