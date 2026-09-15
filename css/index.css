@@ -340,6 +340,41 @@ header .book-table-button p{
     height: 330px;
 }
 
+#OurStory{
+	background-color: #171819;
+	color: #fff;
+}
+
+#OurStory .part .item{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#OurStory h2{
+	font-size: 50px;
+}
+
+#OurStory p.head{
+	font-weight:900;
+}
+
+#OurStory p.lorem{
+	width: 73%;
+}
+
+#OurStory a.phone{
+	font-size: 22px;
+}
+
+#OurStory a.phone::after{
+	bottom: -8px;
+}
+
+#OurStory a.button.btn{
+	margin: auto;
+}
+
 .popup.nav-popup{
 	background-color: rgba(228, 197, 144, 0.5);
 	transition-duration: 0.5s;
