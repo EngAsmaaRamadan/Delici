@@ -32,10 +32,8 @@ showNavLinks();
 let navLiEleAnchorsInPopup = document.querySelectorAll('.nav-popup ul.navbar-nav li a');
 	navLiEleAnchorsInPopup.forEach(function(anchor){
 		anchor.addEventListener('click',function(e){
-			// e.preventDefault();
 			let newAnchor = this,
 				currentAnchor = document.querySelector('.nav-popup ul.navbar-nav li a.active');
-
 			// for(let i = 1;i < currentAnchor.getAttribute('data-anchor-index'); i++){
 			// 	let current = currentAnchor.closest('ul').querySelector(`.nav-popup ul.navbar-nav li a[data-anchor-index="${i}"]`);
 			// 	current.classList.add('active');
