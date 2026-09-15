@@ -21,10 +21,6 @@ nav.navbar .navbar-nav li .nav-link{
 	transition-duration: 0.5s;
 }
 
-nav.navbar .navbar-nav li .nav-link:hover{
-
-}
-
 nav.navbar .navbar-nav li .nav-link.active,
 nav.navbar .navbar-nav li .nav-link:hover{
 	color: var(--main-color);
@@ -56,6 +52,7 @@ nav .animatingLines{
 	align-items: flex-start;
 	height: 20px;
 	width: 30px;
+	cursor: pointer;
 }
 
 nav .animatingLines span{
@@ -234,4 +231,76 @@ header .book-table-button p{
 	margin-block: 8px 10px;
 	font-size: 12px;
 }
-/*i think button in prev next is by rotating the div that contain icon*/
+
+.popup.nav-popup{
+	background-color: rgba(228, 197, 144, 0.5);
+	transition-duration: 0.5s;
+}
+
+.nav-popup .popupBox{
+	background-color: #0e0d0c;
+	background-image: url('../images/bg.png');
+	width: 400px;
+	position: absolute;
+	top: 0;
+	left: -100%;
+	transition-duration: 1s;
+}
+
+.nav-popup.show .popupBox{
+	left: 0;
+	transition-duration: 1s;
+}
+
+.nav-popup .popupBox i{
+	cursor: pointer;
+	position: absolute;
+	right: 13px;
+	top: 15px;
+	font-size: 20px;
+    color: #fff;
+}
+
+.nav-popup .popupBox .sidebar img{
+	width: 150px;
+}
+
+.nav-popup .popupBox .logo,
+.nav-popup .popupBox .sidebar{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-popup .popupBox ul .nav-link{
+	transition-duration: 0.5s;
+	color: #fff;
+}
+
+.nav-popup .popupBox ul .nav-link.active,
+.nav-popup .popupBox ul .nav-link:hover{
+	color: var(--main-color);
+}
+
+.nav-popup .popupBox ul .nav-item{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+    align-items: center;
+    column-gap: 10px;
+    border-top: 1px solid #a7a7a7;
+    border-bottom: 1px solid #a7a7a7;
+    width: 70%;
+    margin: auto;
+}
+
+.nav-popup .popupBox ul .square{
+	width: 10px;
+	height: 10px;
+	border: 2px solid var(--main-color);
+	animation-name: wheel;
+	animation-timing-function: linear;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}

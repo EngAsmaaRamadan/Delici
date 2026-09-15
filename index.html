@@ -31,25 +31,25 @@
           <a class="nav-link active" href="#Home">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#About Us">About Us</a>
+          <a class="nav-link" href="#AboutUs">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#Our Story">Our Story</a>
+          <a class="nav-link" href="#OurStory">Our Story</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#Special Dish">Special Dish</a>
+          <a class="nav-link" href="#SpecialDish">Special Dish</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#Menu">Menu</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#Our Chefs">Our Chefs</a>
+          <a class="nav-link" href="#OurChefs">Our Chefs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#Contact Us">Contact Us</a>
+          <a class="nav-link" href="#ContactUs">Contact Us</a>
         </li>
       </ul>
-      <div class="animatingLines">
+      <div class="animatingLines" onclick="openPopup('nav');">
       	<span></span>
       	<span></span>
       	<span></span>
@@ -107,6 +107,19 @@
 			</div>
 		</div>
 	</header>
+
+	<div class="popup nav-popup" data-popup-name="nav" onclick="closePopup('nav');">
+		<div class="popupBox p-5">
+			<i class="fa-regular fa-circle-xmark" onclick="closePopup('nav');"></i>
+			<div class="container">
+				<div class="logo w-100"><img src="images/logo.png" alt="logo" class="d-block"></div>
+				<div class="sidebar my-4 w-100"><img src="images/sidebar-image.jpg" alt="sidebar" class="img-fluid rounded-circle"></div>
+				<ul class="navbar-nav mb-2 mb-lg-0">
+
+			    </ul>
+			</div>
+		</div>
+	</div>
 	<script src="js/menu.js"></script>
 	<script src="js/function.js"></script>
 	<script src="js/index.js"></script>
