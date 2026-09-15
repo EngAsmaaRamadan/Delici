@@ -375,6 +375,27 @@ header .book-table-button p{
 	margin: auto;
 }
 
+#OurStory img.bg-story{
+	width: 430px;
+}
+
+#OurStory .bg-img{
+	position: relative;
+}
+
+#OurStory .bg-img .right-img img{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#OurStory .bg-img .right-img img:last-child{
+	animation-name: wheel;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
 .popup.nav-popup{
 	background-color: rgba(228, 197, 144, 0.5);
 	transition-duration: 0.5s;
