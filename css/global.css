@@ -32,6 +32,7 @@ a.button.btn{
 	z-index: 2;
 	position: relative;
 	overflow: hidden;
+	transition-duration: 1s;
 	border: 2px solid var(--main-color);
     padding: 15px 40px;
     font-size: 14px;

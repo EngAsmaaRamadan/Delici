@@ -10,6 +10,12 @@ nextButton.addEventListener('click',function(){
 	let currentSlide = sc_carousel.querySelector('.sc-carousel-item.active'),
 		newSlide = currentSlide.nextElementSibling ?? sc_carousel.querySelector('.sc-carousel-item:first-child'),
 		newIndicator = sc_carousel.querySelector(`.circle-indicators li[data-index="${newSlide.getAttribute('data-item-index')}"]`);
+	/*
+	newSlide.classList.add('active');
+	setTimeout(function(){
+		newSlide.classList.add('show');
+	},500);
+	*/
 	updateIndicator(newIndicator,currentSlide,newSlide);
 });
 

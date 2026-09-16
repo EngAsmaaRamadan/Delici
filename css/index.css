@@ -142,6 +142,30 @@ header #sc_carousel .sc-carousel-item.active{
 	transform: scale(1.0);
 }
 
+header #sc_carousel .sc-carousel-item>*{
+	transform: translateY(50px);
+	opacity: 0;
+	transition-duration: 1s;
+	transition-delay: 0.8s;
+}
+
+header #sc_carousel .sc-carousel-item h2{
+	transition-delay: 1.2s;
+}
+
+header #sc_carousel .sc-carousel-item p{
+	transition-delay: 1.6s;
+}
+
+header #sc_carousel .sc-carousel-item .buttons{
+	transition-delay: 2s;
+}
+
+header #sc_carousel .sc-carousel-item.active>*{
+	transform: translateY(0px);
+	opacity: 1;
+}
+
 header #sc_carousel .sc-carousel-item:nth-of-type(1){
 	background-image: url('../images/slider-1.jpg');
 }

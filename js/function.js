@@ -10,6 +10,15 @@ function updateIndicator(newIndicator,currentSlide = null,newSlide = null){
 	newSlide.classList.add('active');
 	prevIndicator.classList.remove('active');
 	newIndicator.classList.add('active');
+
+	/*
+	currentSlide.classList.remove('show');
+	newSlide.classList.add('active');
+	setTimeout(function(){
+		currentSlide.classList.remove('active');
+		currentSlide.classList.add('show');
+	},500);
+	*/
 }
 
 function openPopup(popupName){
