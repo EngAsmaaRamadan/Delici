@@ -114,6 +114,7 @@ ul.circle-indicators .active{
 header #sc_carousel{
 	position: relative;
 	height: 100vh;
+	overflow: hidden;
 }
 
 header #sc_carousel .sc-carousel-item{
@@ -129,10 +130,16 @@ header #sc_carousel .sc-carousel-item{
 	left: 0;
 	width: 100%;
 	z-index: 1;
+	transition-duration: 0.5s;
+	transform: scale(1.5);
+	opacity: 0;
 }
 
 header #sc_carousel .sc-carousel-item.active{
 	z-index: 2;
+	opacity: 1;
+	transition-duration: 0.5s;
+	transform: scale(1.0);
 }
 
 header #sc_carousel .sc-carousel-item:nth-of-type(1){
