@@ -44,3 +44,13 @@
   }
 
 }
+
+@keyframes specialDishMovingImg{
+  0%{
+    transform: translateY(-5px);
+  }
+
+  100%{
+    transform: translateY(25px);
+  }  
+}

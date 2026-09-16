@@ -413,6 +413,59 @@ header .book-table-button p{
 	width: 45%;
 }
 
+#SpecialDish {
+	overflow: hidden;
+	background-color: var(--bg-color);
+	background-image: url('../images/bg.png');
+	color: #fff;
+}
+
+#SpecialDish .part:first-child{
+	background-image: url('../images/special-dish.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+#SpecialDish .row.inside{
+	display: flex;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+}
+
+#SpecialDish .row.inside .part1 .item{
+	position: absolute;
+	top: 15%;
+	left: 9%;
+	animation-name: specialDishMovingImg;
+	animation-timing-function: linear;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+#SpecialDish h2{
+	font-size: 50px;
+}
+
+#SpecialDish p{
+	line-height: 2;
+	width: 80%;
+}
+
+#SpecialDish h5:first-child{
+	color: var(--first-color);
+	font-size: 23px;
+	display: flex;
+	align-items: center;
+}
+
+#SpecialDish h5:last-child{
+	color: var(--main-color);
+	font-size: 28px;
+}
+
 .popup.nav-popup{
 	background-color: rgba(228, 197, 144, 0.5);
 	transition-duration: 0.5s;
