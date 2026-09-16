@@ -17,7 +17,7 @@
 
 	a.button.btn{
 		padding: 10px 20px;
-    	font-size: 12px;
+    	font-size: 13px;
 	}
 
 	ul.circle-indicators {
@@ -50,7 +50,28 @@
 	}
 }
 
-@media (min-width: 371px) and (max-width: 1300px) {}
+@media (min-width: 371px) and (max-width: 1300px) {
+	.title h6 {
+        font-size: 16px;
+    }
+
+    header #sc_carousel .sc-carousel-item h2 {
+        font-size: 40px;
+    }
+
+    header #sc_carousel .sc-carousel-item p {
+        font-size: 13px;
+    }
+
+    ul.circle-indicators {
+        bottom: 5px;
+        right: 20px;
+    }
+
+    header .BookTable {
+        bottom: 30px;
+    }
+}
 
 @media (min-width: 577px) and (max-width: 1300px) {}
 
