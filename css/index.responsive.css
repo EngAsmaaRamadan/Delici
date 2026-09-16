@@ -87,7 +87,23 @@
     }
 }
 
-@media (min-width: 769px) and (max-width: 1300px) {}
+@media (min-width: 769px) and (max-width: 1300px) {
+	nav img {
+	    width: 140px;
+	}
+
+	header #sc_carousel .sc-carousel-item h2 {
+        font-size: 70px;
+    }
+
+	ul.circle-indicators {
+        bottom: 0px;
+    }
+
+    header .BookTable {
+        bottom: 25px;
+    }
+}
 
 @media (min-width: 992px) and (max-width: 1300px) {}
 
