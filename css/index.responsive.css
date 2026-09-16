@@ -1,4 +1,54 @@
-@media (max-width: 1300px) {}
+@media (max-width: 1300px) {
+	.title h6{
+		font-size: 14px;
+	}
+
+	header #sc_carousel .sc-carousel-item h2{
+		font-size: 30px;
+	}
+
+	header #sc_carousel .sc-carousel-item p {
+		font-size: 12px;
+	}
+
+	header button.prev, header button.next{
+		display: none;
+	}
+
+	a.button.btn{
+		padding: 10px 20px;
+    	font-size: 12px;
+	}
+
+	ul.circle-indicators {
+	    bottom: 15px;
+	    right: 30px;
+	}
+
+	header .BookTable{
+		bottom: 45px;
+    	left: 30px;
+	}
+
+	header .square-rotate{
+		width: 80px;
+		height: 80px;
+	}
+
+	header .book-table-button{
+		padding-inline: 0;
+		width: 80px;
+    	height: 80px;
+	}
+
+	header .book-table-button img {
+	    width: 33px;
+	}
+
+	header .book-table-button p{
+		font-size: 10px;
+	}
+}
 
 @media (min-width: 371px) and (max-width: 1300px) {}
 

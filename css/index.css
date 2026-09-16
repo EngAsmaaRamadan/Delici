@@ -1,5 +1,6 @@
 nav{
 	z-index: 100;
+	background-color: transparent;
 }
 
 nav img{
@@ -260,6 +261,8 @@ header .book-table-button{
 	background-color: var(--main-color);
 	padding-inline: 28px;
 	position: relative;
+	width: 100px;
+    height: 100px;
 }
 
 header .book-table-button img{
