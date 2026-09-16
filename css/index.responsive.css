@@ -73,7 +73,19 @@
     }
 }
 
-@media (min-width: 577px) and (max-width: 1300px) {}
+@media (min-width: 577px) and (max-width: 1300px) {
+	.title h6 {
+        font-size: 17px;
+    }
+
+    header #sc_carousel .sc-carousel-item h2 {
+        font-size: 50px;
+    }
+
+    header #sc_carousel .sc-carousel-item p {
+        font-size: 14px;
+    }
+}
 
 @media (min-width: 769px) and (max-width: 1300px) {}
 
