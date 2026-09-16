@@ -115,4 +115,8 @@
 	}
 }
 
-@media (min-width: 1181px) and (max-width: 1300px) {}
+@media (min-width: 1181px) and (max-width: 1300px) {
+	nav img {
+	    width: 160px;
+	}
+}
