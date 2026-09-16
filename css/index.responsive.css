@@ -88,12 +88,12 @@
 }
 
 @media (min-width: 769px) and (max-width: 1300px) {
-	nav img {
-	    width: 140px;
-	}
-
 	header #sc_carousel .sc-carousel-item h2 {
         font-size: 70px;
+    }
+
+    header .book-table-button img {
+        width: 30px;
     }
 
 	ul.circle-indicators {
@@ -105,6 +105,14 @@
     }
 }
 
-@media (min-width: 992px) and (max-width: 1300px) {}
+@media (min-width: 992px) and (max-width: 1300px) {
+	nav .collapse {
+	    justify-content: end;
+	}
+
+	nav.navbar .navbar-nav li {
+	    display: none;
+	}
+}
 
 @media (min-width: 1181px) and (max-width: 1300px) {}
