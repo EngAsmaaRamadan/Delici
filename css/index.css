@@ -12,7 +12,7 @@ nav.scrolledOutHeader{
 }
 
 nav .collapse{
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 nav.navbar .navbar-nav li{
