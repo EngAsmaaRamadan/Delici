@@ -56,6 +56,26 @@
   </div>
 </nav>
 
+<div class="popup nav-popup" data-popup-name="nav" onclick="closePopup('nav');">
+		<div class="popupBox p-5">
+			<i class="fa-regular fa-circle-xmark close" onclick="closePopup('nav');"></i>
+			<div class="container">
+				<div class="logo w-100"><img src="images/logo.png" alt="logo" class="d-block"></div>
+				<div class="sidebar my-4 w-100"><img src="images/sidebar-image.jpg" alt="sidebar" class="img-fluid rounded-circle"></div>
+				<ul class="navbar-nav mb-2 mb-lg-0">
+
+			    </ul>
+			    <h2 class="h1 mt-3 mb-2">Visit Us</h2>
+			    <p><i class="fa-solid fa-location-dot"></i>Delicious City, London 9578, UK</p>
+			    <p><i class="fa-regular fa-clock"></i> Daily : 8.00 am to 10.00 pm</p>
+			    <p class="mb-4"><i class="fa-regular fa-envelope"></i> booking@restaurant.com</p>
+			    <div class="square mb-4"></div>
+			    <p class="fw-bold book mb-0">Booking Request</p>
+			    <a class="phone text-decoration-none" href="tel:+201021080042">+20-102-108-0042</a>
+			</div>
+		</div>
+	</div>
+
 	<header id="Home">
 		<div id="sc_carousel">
 			<div class="sc_carousel-inner">
@@ -118,6 +138,7 @@
 				<div class="left"><img src="images/bg-2.png" alt="bg"></div>
 				<div class="container">
 					<h2 class="h1">We Offer Top Notch</h2>
+					<p class="mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummy text ever.</p>
 						<div class="row">
 
 							<div class="col-lg-4 part">
@@ -133,7 +154,7 @@
 							</div>
 							<div class="col-lg-4 part">
 								<div class="item">
-									<p class="mb-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industrys standard dummy text ever.</p>
+									
 									<div class="product">
 										<div class="product-item p-5">
 											<img src="images/offer-image-2.jpg" alt="offer">
@@ -241,17 +262,17 @@
 				<div class="content">
 					<h2 class="h1">Delicious Menu</h2>
 					<ul class="list-unstyled d-flex column-gap-4 w-100">
-						<li class="indicator-li active">BreakFast</li>
+						<li class="indicator-li active "data-type-name="BreakFast" onclick="updateActive(this); showProducts(this);">BreakFast</li>
 						<li class="square"></li>
-						<li class="indicator-li">Lunch</li>
+						<li class="indicator-li" data-type-name="Lunch" onclick="updateActive(this); showProducts(this);">Lunch</li>
 						<li class="square"></li>
-						<li class="indicator-li">Dinner</li>
+						<li class="indicator-li" data-type-name="Dinner" onclick="updateActive(this); showProducts(this);">Dinner</li>
 						<li class="square"></li>
-						<li class="indicator-li">Drinks</li>
+						<li class="indicator-li" data-type-name="Drinks" onclick="updateActive(this); showProducts(this);">Drinks</li>
 					</ul>
 
 					<div class="row">
-						<div class="col-lg-6 part1">
+						<div class="col-lg-6 part1 pe-5">
 							<div class="item">
 								<div class="row new-product">
 									<div class="col-lg-3">
@@ -341,7 +362,7 @@
 
 							</div>
 						</div>
-						<div class="col-lg-6">
+						<div class="col-lg-6 part2 ps-5">
 							<div class="item">
 								<!-- first row -->
 								<div class="row new-product">
@@ -500,25 +521,7 @@
 		</div>
 	</section>
 
-	<div class="popup nav-popup" data-popup-name="nav" onclick="closePopup('nav');">
-		<div class="popupBox p-5">
-			<i class="fa-regular fa-circle-xmark close" onclick="closePopup('nav');"></i>
-			<div class="container">
-				<div class="logo w-100"><img src="images/logo.png" alt="logo" class="d-block"></div>
-				<div class="sidebar my-4 w-100"><img src="images/sidebar-image.jpg" alt="sidebar" class="img-fluid rounded-circle"></div>
-				<ul class="navbar-nav mb-2 mb-lg-0">
-
-			    </ul>
-			    <h2 class="h1 mt-3 mb-2">Visit Us</h2>
-			    <p><i class="fa-solid fa-location-dot"></i>Delicious City, London 9578, UK</p>
-			    <p><i class="fa-regular fa-clock"></i> Daily : 8.00 am to 10.00 pm</p>
-			    <p class="mb-4"><i class="fa-regular fa-envelope"></i> booking@restaurant.com</p>
-			    <div class="square mb-4"></div>
-			    <p class="fw-bold book mb-0">Booking Request</p>
-			    <a class="phone text-decoration-none" href="tel:+201021080042">+20-102-108-0042</a>
-			</div>
-		</div>
-	</div>
+	
 	<script src="js/menu.js"></script>
 	<script src="js/function.js"></script>
 	<script src="js/index.js"></script>

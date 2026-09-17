@@ -1,6 +1,6 @@
 @media (max-width: 1300px) {
 	.title h6{
-		font-size: 14px;
+		font-size: 15px;
 	}
 
 	header #sc_carousel .sc-carousel-item h2{
@@ -13,6 +13,14 @@
 
 	header button.prev, header button.next{
 		display: none;
+	}
+
+	#AboutUs .title h6 {
+        font-size: 17px;
+    }
+
+	#AboutUs h2 {
+	    font-size: 30px;
 	}
 
 	a.button.btn{

@@ -297,7 +297,7 @@ header .book-table-button p{
 #AboutUs .right,
 #Menu .right-img{
 	right: 0;
-	top: 0;
+	bottom: 0;
 	transform: translateY(-20px);
 	animation-name: AboutMovingRight;
 }
@@ -317,7 +317,7 @@ header .book-table-button p{
 #AboutUs .left,
 #Menu .left-img{
 	left: 0;
-	bottom: 0;
+	top: 0;
 	transform: translateY(-10px);
 	animation-name: AboutMovingLeft;
 }
@@ -545,6 +545,7 @@ header .book-table-button p{
 #Menu .indicator-li{
 	position: relative;
 	font-size: 20px;
+	cursor: pointer;
 }
 
 #Menu span{
