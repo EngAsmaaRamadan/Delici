@@ -5,8 +5,9 @@ let sc_carousel = document.querySelector('#sc_carousel'),
 	navUlAnchor = document.querySelector('.nav-popup ul.navbar-nav'),
 	navLiEleAnchors = document.querySelectorAll('nav .nav-item .nav-link'),
 	popupBoxes = document.querySelectorAll('.popupBox'),
-	MenuRowPart1 = document.querySelector('#Menu .row .part1'),
-	MenuRowPart2 = document.querySelector('#Menu .row .part2');
+	MenuRow = document.querySelector('#Menu .row'),
+	MenuRowPart1 = MenuRow.querySelector('.part1'),
+	MenuRowPart2 = MenuRow.querySelector('.part2');
 
 nextButton.addEventListener('click',function(){
 	let currentSlide = sc_carousel.querySelector('.sc-carousel-item.active'),
