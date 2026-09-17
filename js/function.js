@@ -44,20 +44,18 @@ function showProducts(that,type){
 			products = Drinks;
 			break;
 	}
-
-	MenuRowPart1.innerHTML = "";
-	MenuRowPart2.innerHTML = "";
+	MenuRow.innerHTML = "";
 	if(isEven(products.length) == true){//the 2 parts have the same number of products
-		addPartMenu(MenuRowPart1,products,1,products.length,true);
-		addPartMenu(MenuRowPart2,products,2,products.length,true);
+		addPartMenu(products,1,Math.floor(products.length / 2),true);
+		addPartMenu(products,2,Math.floor(products.length / 2),true);
 	}else if(isEven(products.length) == false){//the 2 parts doesnt have the same number of products(first part take length/2 +1 from products , part2 take length/2 from products)
-		addPartMenu(MenuRowPart1,products,1,Math.floor(( (products.length - 1) / 2 ) + 1),false);
-		addPartMenu(MenuRowPart2,products,2,Math.floor(products.length / 2),false);
+		addPartMenu(products,1,Math.floor(( (products.length - 1) / 2 ) + 1),false);
+		addPartMenu(products,2,Math.floor(products.length / 2),false);
 	}
 
 }
 
-function addPartMenu(menuPart,currentProducts,p,numOfProductsInPart,isEven){//p = 1 -->col-lg-6 part1 pe-5 , p=2 --> col-lg-6 part2 ps-5 (1 difference)
+function addPartMenu(currentProducts,p,numOfProductsInPart,isEven){//p = 1 -->col-lg-6 part1 pe-5 , p=2 --> col-lg-6 part2 ps-5 (1 difference)
 	MenuRow.innerHTML += `
 		<div class="col-lg-6 ${(p == 1) ? 'part1 pe-5' : 'part2 ps-5' } ">
 			<div class="item">
@@ -68,7 +66,7 @@ function addPartMenu(menuPart,currentProducts,p,numOfProductsInPart,isEven){//p 
 }
 
 function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
-	console.log(Math.floor(( numOfProductsInPart / 2 ) - 1));
+	console.log(productsInPart);
 	let newRow = '',
 		startIndex = (isEven == true) ? 0 : (p == 1) ? 0 : Math.floor(numOfProductsInPart + 1 ),
 		endIndex;
@@ -77,9 +75,7 @@ function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
 		}else if(p == 2){
 			endIndex = productsInPart.length;
 		}
-	console.log(startIndex,endIndex);
 	for(let i = startIndex ; i < endIndex; i++){
-		console.log(productsInPart[i]);
 		newRow += `
 			<div class="row new-product" data-product-id="${productsInPart[i].id}">
 				<div class="col-lg-3">
