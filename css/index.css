@@ -1,5 +1,5 @@
 nav{
-	z-index: 100;
+	z-index: 10;
 	background-color: transparent;
 }
 
@@ -33,7 +33,8 @@ nav.navbar .navbar-nav li .nav-link:hover{
 
 nav.navbar .navbar-nav li .nav-link::after,
 a.phone::after,
-#AboutUs a::after{
+#AboutUs a::after,
+#Menu .indicator-li::after{
 	content: "";
 	display: block;
 	width: 0%;
@@ -50,7 +51,9 @@ a.phone::after,
 nav.navbar .navbar-nav li .nav-link.active::after,
 nav.navbar .navbar-nav li .nav-link:hover::after,
 a.phone:hover::after,
-#AboutUs a:hover::after{
+#AboutUs a:hover::after,
+#Menu .indicator-li:hover::after,
+#Menu .indicator-li.active::after{
 	width: 100%;
 }
 
@@ -282,26 +285,37 @@ header .book-table-button p{
 	overflow: hidden;
 }
 
+#AboutUs>*{
+	position: relative;
+	z-index: 2;
+}
+
 #AboutUs h2{
 	font-size: 50px;
 }
 
-#AboutUs .right{
+#AboutUs .right,
+#Menu .right-img{
 	right: 0;
 	top: 0;
 	transform: translateY(-20px);
+	animation-name: AboutMovingRight;
 }
 
 #AboutUs .right,
-#AboutUs .left{
+#AboutUs .left,
+#Menu .left-img,
+#Menu .right-img{
 	position: absolute;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 	animation-direction: alternate;
 	animation-duration: 2s;
+	z-index: 1;
 }
 
-#AboutUs .left{
+#AboutUs .left,
+#Menu .left-img{
 	left: 0;
 	bottom: 0;
 	transform: translateY(-10px);
@@ -376,7 +390,7 @@ header .book-table-button p{
 }
 
 #OurStory{
-	background-color: #171819;
+	background-color: var(--bg-color2);
 	color: #fff;
 }
 
@@ -500,9 +514,82 @@ header .book-table-button p{
 	font-size: 28px;
 }
 
+#Menu{
+	background-color: var(--bg-color2);
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+}
+
+#Menu>*{
+	position: relative;
+	z-index: 2;
+}
+
+#Menu .content>.row .part1{
+	border-right: 2px solid #5f5f60;
+}
+
+#Menu .content .row.new-product{
+	margin-bottom: 40px;
+}
+
+#Menu ul{
+	align-items: center;
+	justify-content: center;
+	border-top: 1px solid var(--first-color);
+    border-bottom: 1px solid var(--first-color);
+    padding-block: 20px;
+}
+
+#Menu .indicator-li{
+	position: relative;
+	font-size: 20px;
+}
+
+#Menu span{
+	display: block;
+    border-top: 1px solid var(--first-color);
+    border-bottom: 1px solid var(--first-color);
+    height: 4px;
+    flex-grow: 1;
+    margin-inline: 15px;
+}
+
+#Menu .img-container{
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Menu .img-container img{
+	transform: scale(1.5);
+}
+
+#Menu .product-info{
+	display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#Menu h4{
+	color: var(--main-color);
+	font-size: 20px;
+}
+
+#Menu p{
+	color: var(--first-color);
+	font-size: 14px;
+    padding-right: 20px;
+}
+
 .popup.nav-popup{
 	background-color: rgba(228, 197, 144, 0.5);
 	transition-duration: 0.5s;
+	/*position: fixed;*/
 }
 
 .nav-popup .popupBox{
@@ -510,7 +597,7 @@ header .book-table-button p{
 	background-image: url('../images/bg.png');
 	width: 400px;
 	position: absolute;
-	scroll-behavior: ;
+	z-index: 200;
 	top: 0;
 	left: -100%;
 	transition-duration: 1s;
@@ -575,7 +662,7 @@ header .book-table-button p{
     padding-block: 2px;
 }
 
-.nav-popup .popupBox .square{
+.square{
 	width: 10px;
 	height: 10px;
 	border: 2px solid var(--main-color);
