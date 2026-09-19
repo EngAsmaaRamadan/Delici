@@ -10,19 +10,10 @@ function updateIndicator(newIndicator,currentSlide = null,newSlide = null){
 	newSlide.classList.add('active');
 	prevIndicator.classList.remove('active');
 	newIndicator.classList.add('active');
-
-	/*
-	currentSlide.classList.remove('show');
-	newSlide.classList.add('active');
-	setTimeout(function(){
-		currentSlide.classList.remove('active');
-		currentSlide.classList.add('show');
-	},500);
-	*/
 }
 
 function updateActive(that){
-	let prevActive = that.parentElement.querySelector('.active');
+	let prevActive = that.closest('ul').querySelector('.active');
 	prevActive.classList.remove('active');
 	that.classList.add('active');
 }
@@ -148,7 +139,7 @@ function prepareNavLi(navLiEleAnchors){
 		liElements += `
 			<li class="nav-item">
 				<div class="square ${(index == 0) ? '' : 'd-none'}"></div>
-        		<a class="nav-link ${(index == 0) ? 'active' : ''}" data-anchor-index="${index + 1}" href="#${navLiEleAnchor.href}">${navLiEleAnchor.textContent}</a>
+        		<a class="nav-link ${(index == 0) ? 'active' : ''}" data-anchor-index="${index + 1}" href="${navLiEleAnchor.getAttribute('href')}">${navLiEleAnchor.textContent}</a>
         	</li>
 		`;
 	});
