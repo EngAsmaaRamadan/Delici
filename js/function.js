@@ -62,40 +62,72 @@ function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
 		startIndex = (isEven == true) ? 0 : (p == 1) ? 0 : Math.floor(numOfProductsInPart + 1 ),
 		endIndex;
 		if(p == 1){
-			endIndex = productsInPart.length - numOfProductsInPart + 1;
-		}else if(p == 2){
-			endIndex = productsInPart.length;
-		}
-	for(let i = startIndex ; i < endIndex; i++){
-		newRow += `
-			<div class="row new-product" data-product-id="${productsInPart[i].id}">
-				<div class="col-lg-3">
-					<div class="item img-container rounded-4">
-						<img src="images/${productsInPart[i].images[0]}" alt="${productsInPart[i].images[0]}" class="img-fluid">
-					</div>
-				</div>
-				<div class="col-lg-9 ps-0">
-					<div class="item py-2">
-						<div class="row">
-							<div class="col-lg-10 pe-0">
-								<div class="item product-info">
-									<h4>${productsInPart[i].name}</h4>
-									<span></span>
-								</div>
-							</div>
-							<div class="col-lg-2 ps-0">
-								<div class="item">
-									<h4>${productsInPart[i].price}</h4>
-								</div>
+			endIndex = (isEven == true) ? (productsInPart.length - numOfProductsInPart) : (productsInPart.length - numOfProductsInPart + 1);
+			for(let i = startIndex ; i < endIndex; i++){
+				newRow += `
+					<div class="row new-product" data-product-id="${productsInPart[i].id}">
+						<div class="col-lg-3">
+							<div class="item img-container rounded-4">
+								<img src="images/${productsInPart[i].images[0]}" alt="${productsInPart[i].images[0]}" class="img-fluid">
 							</div>
 						</div>
-						<p class="text-start">${productsInPart[i].miniDescription}</p>
+						<div class="col-lg-9 ps-0">
+							<div class="item py-2">
+								<div class="row">
+									<div class="col-lg-10 pe-0">
+										<div class="item product-info">
+											<h4>${productsInPart[i].name}</h4>
+											<span></span>
+										</div>
+									</div>
+									<div class="col-lg-2 ps-0">
+										<div class="item">
+											<h4>${productsInPart[i].price}</h4>
+										</div>
+									</div>
+								</div>
+								<p class="text-start">${productsInPart[i].miniDescription}</p>
 
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
-		`;
-	}
+				`;
+			}
+
+		}else if(p == 2){
+			endIndex = (isEven == true) ? (numOfProductsInPart) : (numOfProductsInPart - 1);
+			for(let i = startIndex ; i < (startIndex + endIndex + 1); i++){
+				newRow += `
+					<div class="row new-product" data-product-id="${productsInPart[i].id}">
+						<div class="col-lg-3">
+							<div class="item img-container rounded-4">
+								<img src="images/${productsInPart[i].images[0]}" alt="${productsInPart[i].images[0]}" class="img-fluid">
+							</div>
+						</div>
+						<div class="col-lg-9 ps-0">
+							<div class="item py-2">
+								<div class="row">
+									<div class="col-lg-10 pe-0">
+										<div class="item product-info">
+											<h4>${productsInPart[i].name}</h4>
+											<span></span>
+										</div>
+									</div>
+									<div class="col-lg-2 ps-0">
+										<div class="item">
+											<h4>${productsInPart[i].price}</h4>
+										</div>
+									</div>
+								</div>
+								<p class="text-start">${productsInPart[i].miniDescription}</p>
+
+							</div>
+						</div>
+					</div>
+				`;
+			}
+		}
+	
 	
 	return newRow;
 }
