@@ -111,22 +111,6 @@ function isEven(num){
 	}
 }
 
-function openPopup(popupName){
-	let popupEle = document.querySelector(`.popup[data-popup-name="${popupName}"]`);
-	popupEle.classList.add('active');
-	setTimeout(function(){
-		popupEle.classList.add('show');	
-	},100);
-}
-
-function closePopup(popupName){
-	let popupEle = document.querySelector(`.popup[data-popup-name="${popupName}"]`);
-	popupEle.classList.remove('show');
-	setTimeout(function(){
-		popupEle.classList.remove('active');	
-	},1000);
-}
-
 function showNavLinks(){
 	navUlAnchor.innerHTML += `
 		${prepareNavLi(navLiEleAnchors)}
@@ -186,4 +170,20 @@ function updateNavLinkOnScrollOrReload(){
 	sections.forEach(function(section){
 		updateNavLink(section.id);
 	});
+}
+
+function openPopup(popupName){
+	let popupEle = document.querySelector(`.popup[data-popup-name="${popupName}"]`);
+	popupEle.classList.add('active');
+	setTimeout(function(){
+		popupEle.classList.add('show');	
+	},100);
+}
+
+function closePopup(popupName){
+	let popupEle = document.querySelector(`.popup[data-popup-name="${popupName}"]`);
+	popupEle.classList.remove('show');
+	setTimeout(function(){
+		popupEle.classList.remove('active');	
+	},1000);
 }

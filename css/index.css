@@ -838,6 +838,9 @@ a.phone{
 	left: 0;
 	width: 100%;
 	height: 100vh;
+	transition-duration: 1s;
+	transition-delay: 4s;
+	opacity: 1;
 }
 
 .circle-loading{
@@ -855,6 +858,10 @@ a.phone{
 .text-letters{
 	letter-spacing: 5px;
 	font-size: 80px;
+}
+
+.loadingPage.hide{
+	opacity: 0;
 }
 
 .loadingPage span{

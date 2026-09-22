@@ -10,7 +10,16 @@ let sc_carousel = document.querySelector('#sc_carousel'),
 	MenuRowPart2 = MenuRow.querySelector('.part2'),
 	sections = document.querySelectorAll('section, header'),
 	navEle = document.querySelector('nav'),
-	scrollYPixels = window.scrollY;
+	scrollYPixels = window.scrollY,
+	loadingPage = document.querySelector('.loadingPage');
+
+window.addEventListener('DOMContentLoaded',function(){
+	loadingPage.classList.add('hide');
+	setTimeout(function(){
+		loadingPage.classList.add('d-none');
+	},5000);
+
+});
 
 nextButton.addEventListener('click',function(){
 	let currentSlide = sc_carousel.querySelector('.sc-carousel-item.active'),
