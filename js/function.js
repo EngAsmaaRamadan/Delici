@@ -146,3 +146,23 @@ function prepareNavLi(navLiEleAnchors){
 	return liElements;
 }
 
+function updateNavLink(sectionId){
+	let section = document.querySelector(`#${sectionId}`),
+		topOfSection = section.offsetTop,
+		navHeight = document.querySelector('nav').clientHeight,
+		sectionHeight = section.clientHeight,
+		sectionBottom = topOfSection + sectionHeight;
+	if(window.scrollY >= topOfSection && window.scrollY <= sectionBottom){
+		let currentNavLinks = document.querySelectorAll('.nav-link.active'),
+			navLinksOfSection = document.querySelectorAll(`a[href="#${sectionId}"]`);
+		currentNavLinks.forEach(function(currentNavLink){
+			currentNavLink.classList.remove('active');
+		});
+		console.log(currentNavLinks);
+		currentNavLinks[1].parentElement.querySelector('.square').classList.add('d-none');
+		navLinksOfSection.forEach(function(navLinkOfSection){
+			navLinkOfSection.classList.add('active');
+		});
+		navLinksOfSection[1].parentElement.querySelector('.square').classList.remove('d-none');
+	}
+}
