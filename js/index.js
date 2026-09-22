@@ -9,7 +9,8 @@ let sc_carousel = document.querySelector('#sc_carousel'),
 	MenuRowPart1 = MenuRow.querySelector('.part1'),
 	MenuRowPart2 = MenuRow.querySelector('.part2'),
 	sections = document.querySelectorAll('section, header'),
-	navEle = document.querySelector('nav');
+	navEle = document.querySelector('nav'),
+	scrollYPixels = window.scrollY;
 
 nextButton.addEventListener('click',function(){
 	let currentSlide = sc_carousel.querySelector('.sc-carousel-item.active'),
@@ -33,20 +34,11 @@ circleIndicators.forEach(function(indicator){
 
 showNavLinks();
 
-sections.forEach(function(section){
-	updateNavLink(section.id);
-});
+updateNavLinkOnScrollOrReload();
 
 window.addEventListener('scroll',function(){
-	if(window.scrollY >= 5){
-	navEle.classList.add('has-background');
-	}else{
-		navEle.classList.remove('has-background');
-	}
-	sections.forEach(function(section){
-		updateNavLink(section.id);
-	});
-
+	updateNavClasses();
+	updateNavLinkOnScrollOrReload();
 });
 
 let navLiEleAnchorsInPopup = document.querySelectorAll('.nav-popup ul.navbar-nav li a');

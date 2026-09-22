@@ -158,11 +158,32 @@ function updateNavLink(sectionId){
 		currentNavLinks.forEach(function(currentNavLink){
 			currentNavLink.classList.remove('active');
 		});
-		console.log(currentNavLinks);
 		currentNavLinks[1].parentElement.querySelector('.square').classList.add('d-none');
 		navLinksOfSection.forEach(function(navLinkOfSection){
 			navLinkOfSection.classList.add('active');
 		});
 		navLinksOfSection[1].parentElement.querySelector('.square').classList.remove('d-none');
 	}
+}
+
+function updateNavClasses(){
+	if(window.scrollY >= 5){
+		navEle.classList.add('has-background');
+	}else{
+		navEle.classList.remove('has-background');
+	}
+
+	if(window.scrollY > scrollYPixels){
+		navEle.classList.add('scrollDown');
+		scrollYPixels = window.scrollY;
+	}else if(window.scrollY < scrollYPixels){
+		navEle.classList.remove('scrollDown');
+		scrollYPixels = window.scrollY;
+	}
+}
+
+function updateNavLinkOnScrollOrReload(){
+	sections.forEach(function(section){
+		updateNavLink(section.id);
+	});
 }
