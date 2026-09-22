@@ -721,6 +721,12 @@ header .book-table-button p{
 	font-size: 14px;
 }
 
+#ContactUs .content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .popup.nav-popup{
 	background-color: rgba(228, 197, 144, 0.5);
 	transition-duration: 0.5s;
