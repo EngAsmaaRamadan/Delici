@@ -149,7 +149,7 @@ function prepareNavLi(navLiEleAnchors){
 function updateNavLink(sectionId){
 	let section = document.querySelector(`#${sectionId}`),
 		topOfSection = section.offsetTop,
-		navHeight = document.querySelector('nav').clientHeight,
+		navHeight = navEle.clientHeight,
 		sectionHeight = section.clientHeight,
 		sectionBottom = topOfSection + sectionHeight;
 	if(window.scrollY >= topOfSection && window.scrollY <= sectionBottom){

@@ -1,13 +1,14 @@
 nav{
 	z-index: 10;
 	background-color: transparent;
+	transition-duration: 1s;
 }
 
 nav img {
     width: 140px;
 }
 
-nav.scrolledOutHeader{
+nav.has-background{
 	background-color: #202020;
 }
 
