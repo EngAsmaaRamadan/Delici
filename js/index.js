@@ -11,7 +11,19 @@ let sc_carousel = document.querySelector('#sc_carousel'),
 	sections = document.querySelectorAll('section, header'),
 	navEle = document.querySelector('nav'),
 	scrollYPixels = window.scrollY,
-	loadingPage = document.querySelector('.loadingPage');
+	loadingPage = document.querySelector('.loadingPage'),
+	productsTypesLis = document.querySelectorAll('ul.productsTypes li');
+if(localStorage.getItem('lastActiveIndex') != null){
+	productsTypesLis.forEach(function(productsTypesLi){
+		if(productsTypesLi.getAttribute('data-tab-index') == JSON.parse(localStorage.getItem('lastActiveIndex')) && !(productsTypesLi.className.includes('active'))){
+			productsTypesLi.classList.add('active');
+		}else if(productsTypesLi.getAttribute('data-tab-index') != JSON.parse(localStorage.getItem('lastActiveIndex')) && productsTypesLi.className.includes('active')){
+			productsTypesLi.classList.remove('active');
+		}
+	});
+}else{
+	localStorage.setItem('lastActiveIndex','0');
+}
 
 /*
 window.addEventListener('DOMContentLoaded',function(){

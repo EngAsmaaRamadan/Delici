@@ -221,6 +221,6 @@ function closePopup(popupName){
 }
 
 function updateActiveLiWhenLoad(lastActiveIndex,lastActiveProductsType){
-	localStorage.setItem('lastActive',JSON.stringify(lastActiveIndex));
+	localStorage.setItem('lastActiveIndex',JSON.stringify(lastActiveIndex));
 	localStorage.setItem('lastActiveProductsType',JSON.stringify(lastActiveProductsType));
 }
