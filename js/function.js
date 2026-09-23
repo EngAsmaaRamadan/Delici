@@ -36,6 +36,7 @@ function showProducts(that,type){
 			break;
 	}
 	MenuRow.innerHTML = "";
+	console.log(products + "before fns");
 	if(isEven(products.length) == true){//the 2 parts have the same number of products
 		addPartMenu(products,1,Math.floor(products.length / 2),true);
 		addPartMenu(products,2,Math.floor(products.length / 2),true);
@@ -59,11 +60,14 @@ function addPartMenu(currentProducts,p,numOfProductsInPart,isEven){//p = 1 -->co
 function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
 	console.log(productsInPart);
 	let newRow = '',
-		startIndex = (isEven == true) ? 0 : (p == 1) ? 0 : Math.floor(numOfProductsInPart + 1 ),
+		startIndex = (isEven == true) ? ( (p == 1) ? 0 : Math.floor(numOfProductsInPart ) ) : ( (p == 1) ? 0 : Math.floor(numOfProductsInPart + 1 ) ),
 		endIndex;
 		if(p == 1){
+			console.log('we are in part 1');
+			console.log(`num is ${numOfProductsInPart}`);
 			endIndex = (isEven == true) ? (productsInPart.length - numOfProductsInPart) : (productsInPart.length - numOfProductsInPart + 1);
 			for(let i = startIndex ; i < endIndex; i++){
+				console.log(i);
 				newRow += `
 					<div class="row new-product" data-product-id="${productsInPart[i].id}">
 						<div class="col-lg-3">
@@ -82,7 +86,7 @@ function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
 									</div>
 									<div class="col-lg-2 ps-0">
 										<div class="item">
-											<h4>${productsInPart[i].price}</h4>
+											<h4>$${productsInPart[i].price}</h4>
 										</div>
 									</div>
 								</div>
@@ -93,10 +97,17 @@ function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
 					</div>
 				`;
 			}
+			console.log("done loop of part1");
 
 		}else if(p == 2){
-			endIndex = (isEven == true) ? (numOfProductsInPart) : (numOfProductsInPart - 1);
-			for(let i = startIndex ; i < (startIndex + endIndex + 1); i++){
+			console.log('we are in part 2');
+			console.log(`num is ${numOfProductsInPart}`);
+			console.log(startIndex);
+
+			endIndex = (isEven == true) ? (numOfProductsInPart * 2 ) : (numOfProductsInPart * 2 + 1);
+			console.log(endIndex);
+			for(let i = startIndex ; i < endIndex ; i++){
+				console.log(i);
 				newRow += `
 					<div class="row new-product" data-product-id="${productsInPart[i].id}">
 						<div class="col-lg-3">
@@ -115,7 +126,7 @@ function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
 									</div>
 									<div class="col-lg-2 ps-0">
 										<div class="item">
-											<h4>${productsInPart[i].price}</h4>
+											<h4>$${productsInPart[i].price}</h4>
 										</div>
 									</div>
 								</div>
@@ -128,7 +139,7 @@ function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
 			}
 		}
 	
-	
+	console.log("done loop of part2");
 	return newRow;
 }
 
