@@ -539,6 +539,43 @@ header .book-table-button p{
 	margin-bottom: 40px;
 }
 
+#Menu .content .img-container{
+	position: relative;
+}
+
+#Menu .content .img-container::before{
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(228, 197, 144, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 2;
+}
+
+#Menu .content .img-container-parent:hover .img-container::before{
+	opacity: 1;
+	transition-duration: 0.5s;
+}
+
+#Menu .content .img-container-parent i.open{
+	position: absolute;
+	color: #000;
+	cursor: pointer;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0) rotate(0deg);
+	z-index: 3;
+}
+
+#Menu .content .img-container-parent:hover i.open{
+	transform: translate(-50%, -50%) scale(1.5) rotate(180deg);
+	transition-duration: 0.5s;
+}
+
 #Menu ul{
 	align-items: center;
 	justify-content: center;
@@ -571,8 +608,13 @@ header .book-table-button p{
     align-items: center;
 }
 
-#Menu .img-container img{
+#Menu .img-container-parent .img-container img{
 	transform: scale(1.5);
+	transition-duration: 0.5s;
+}
+
+#Menu .img-container-parent:hover .img-container img{
+	transform: scale(1.8);
 }
 
 #Menu .product-info{

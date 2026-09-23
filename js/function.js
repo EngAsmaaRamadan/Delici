@@ -66,9 +66,10 @@ function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
 			endIndex = (isEven == true) ? (productsInPart.length - numOfProductsInPart) : (productsInPart.length - numOfProductsInPart + 1);
 			for(let i = startIndex ; i < endIndex; i++){
 				newRow += `
-					<div class="row new-product" data-product-id="${productsInPart[i].id}">
+					<div class="row new-product img-container-parent" data-product-id="${productsInPart[i].id}">
 						<div class="col-lg-3">
 							<div class="item img-container rounded-4">
+									<i class="fa-regular fa-square-plus open"></i>
 								<img src="images/${productsInPart[i].images[0]}" alt="${productsInPart[i].images[0]}" class="img-fluid">
 							</div>
 						</div>
@@ -100,9 +101,10 @@ function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
 			endIndex = (isEven == true) ? (numOfProductsInPart * 2 ) : (numOfProductsInPart * 2 + 1);
 			for(let i = startIndex ; i < endIndex ; i++){
 				newRow += `
-					<div class="row new-product" data-product-id="${productsInPart[i].id}">
+					<div class="row new-product img-container-parent" data-product-id="${productsInPart[i].id}">
 						<div class="col-lg-3">
 							<div class="item img-container rounded-4">
+									<i class="fa-regular fa-square-plus open"></i>
 								<img src="images/${productsInPart[i].images[0]}" alt="${productsInPart[i].images[0]}" class="img-fluid">
 							</div>
 						</div>
