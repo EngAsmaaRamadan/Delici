@@ -28,7 +28,8 @@ h6{
 	width: 100px;
 }
 
-a.button.btn{
+a.button.btn,
+button.button.btn{
 	letter-spacing: 1.5px;
 	z-index: 2;
 	position: relative;
@@ -39,17 +40,20 @@ a.button.btn{
     font-size: 14px;
 }
 
-a.button.btn:hover{
+a.button.btn:hover,
+button.button.btn:hover{
 	border: 2px solid var(--main-color);
 }
 
-a.button.btn span{
+a.button.btn span,
+button.button.btn span{
 	color: var(--main-color);
 	transition-duration: 1s;
 	z-index: 2;
 }
 
-a.button.btn:hover span{
+a.button.btn:hover span,
+button.button.btn:hover span{
 	color: #000;
 }
 
@@ -57,16 +61,20 @@ a.button.btn:hover span{
 	border: 2px solid var(--main-color);
 }
 
-a.button.btn::before{
+a.button.btn::before,
+button.button.btn::before{
 	top: 100%;
 }
 
-a.button.btn:hover::before{
+a.button.btn:hover::before,
+button.button.btn:hover::before{
 	top: 0%;
 }
 
 a.button.btn::before,
-a.button.btn::after{
+button.button.btn::before,
+a.button.btn::after,
+button.button.btn::after{
 	content: "";
 	position: absolute;
 	display: block;
@@ -77,11 +85,13 @@ a.button.btn::after{
 	transition-duration: 1s;
 }
 
-a.button.btn::after{
+a.button.btn::after,
+button.button.btn::after{
 	bottom: 100%;
 }
 
-a.button.btn:hover::after{
+a.button.btn:hover::after,
+button.button.btn:hover::after{
 	bottom: 0%;
 }
 
@@ -103,4 +113,14 @@ a.button.btn:hover::after{
 
 .popup.show{
 	opacity: 1;
+}
+
+.square{
+	width: 10px;
+	height: 10px;
+	border: 2px solid var(--main-color);
+	animation-name: wheel;
+	animation-timing-function: linear;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
 }

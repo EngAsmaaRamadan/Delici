@@ -721,10 +721,108 @@ header .book-table-button p{
 	font-size: 14px;
 }
 
-#ContactUs .content{
+#ContactUs::before{
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#ContactUs{
+	padding-top: 80px;
+	position: relative;
+	background-image: url('../images/contact-bg.jpg');
+	background-position: center;
+	background-size: cover;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	min-height: 100vh;
+}
+
+#ContactUs .content form{
+	/*transform: translate(-50%, -50%);*/
+	width: 500px;
+	margin: auto;
+	position: relative;
+	/*left: 50%;*/
+	/*top: 50%;*/
+}
+
+#ContactUs .content form::before,
+#ContactUs .content form::after{
+	content: "";
+	display: block;
+	width: 15px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	background-image: url('../images/pattern-9.svg');
+	background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#ContactUs .content form::before{
+	left: 0;
+}
+
+#ContactUs .content form{
+	background-color: var(--bg-color2);
+    background-image: url(../images/bg.png);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#ContactUs .content form::after{
+	right: 0;
+}
+
+#ContactUs .content form p{
+	color: var(--first-color);
+}
+
+#ContactUs .content form textarea{
+	resize: none;
+}
+
+#ContactUs .content form .input_group{
+	display: flex;
+}
+
+#ContactUs .content form .input_group .input,
+#ContactUs .content form textarea.form-control{
+	background-color: transparent;
+	color: var(--first-color);
+	border: 1px solid var(--first-color);
+}
+
+#ContactUs .content form .input_group .input:focus,
+#ContactUs .content form textarea.form-control:focus{
+	border: 1.5px solid var(--main-color);
+	box-shadow: 0 0 0 0.5px var(--main-color);
+}
+
+#ContactUs .content form .input_group .input::placeholder,
+#ContactUs .content form textarea.form-control::placeholder{
+	color: var(--first-color);
+}
+
+#ContactUs .content footer {
+	position: relative;
+	text-align: center;
+	color: #fff;
+}
+
+#ContactUs .content footer span{
+	color: var(--main-color);
 }
 
 .popup.nav-popup{
@@ -801,16 +899,6 @@ header .book-table-button p{
     border-top: 1px solid var(--first-color);
     border-bottom: 1px solid var(--first-color);
     padding-block: 2px;
-}
-
-.square{
-	width: 10px;
-	height: 10px;
-	border: 2px solid var(--main-color);
-	animation-name: wheel;
-	animation-timing-function: linear;
-	animation-duration: 10s;
-	animation-iteration-count: infinite;
 }
 
 .nav-popup .popupBox h2{
