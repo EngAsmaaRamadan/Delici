@@ -20,8 +20,8 @@ function updateActive(that){
 	updateActiveLiWhenLoad(that.getAttribute('data-tab-index'),that.getAttribute('data-type-name'));
 }
 
-function showProducts(that,type){
-	let typeName = that.getAttribute('data-type-name'),
+function showProducts(that = null,type){
+	let typeName = that?.getAttribute('data-type-name') ?? type,
 		products;
 	switch(typeName) {
 		case 'BreakFast':

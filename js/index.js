@@ -26,7 +26,7 @@ if(localStorage.getItem('lastActiveIndex') != null){
 
 //update products when reload
 if(localStorage.getItem('lastActiveProductsType') != null){
-
+	showProducts(null,JSON.parse(localStorage.getItem('lastActiveProductsType')));
 }
 
 /*
