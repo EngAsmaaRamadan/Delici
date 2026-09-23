@@ -56,6 +56,23 @@
 	header .book-table-button p{
 		font-size: 10px;
 	}
+
+	#ContactUs .content form{
+		width: 300px;
+	}
+
+	#ContactUs .content form p {
+	    font-size: 14px;
+	}
+
+	button.button.btn{
+		font-size: 12px;
+		padding: 12px 40px;
+	}
+
+	#ContactUs .content footer p{
+		font-size: 13px;
+	}
 }
 
 @media (min-width: 371px) and (max-width: 1300px) {
