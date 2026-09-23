@@ -13,16 +13,20 @@ let sc_carousel = document.querySelector('#sc_carousel'),
 	scrollYPixels = window.scrollY,
 	loadingPage = document.querySelector('.loadingPage'),
 	productsTypesLis = document.querySelectorAll('ul.productsTypes li');
+
+//update active li
 if(localStorage.getItem('lastActiveIndex') != null){
-	productsTypesLis.forEach(function(productsTypesLi){
-		if(productsTypesLi.getAttribute('data-tab-index') == JSON.parse(localStorage.getItem('lastActiveIndex')) && !(productsTypesLi.className.includes('active'))){
-			productsTypesLi.classList.add('active');
-		}else if(productsTypesLi.getAttribute('data-tab-index') != JSON.parse(localStorage.getItem('lastActiveIndex')) && productsTypesLi.className.includes('active')){
-			productsTypesLi.classList.remove('active');
-		}
-	});
+	let productsTypesActiveLi = document.querySelector('ul.productsTypes li.active'),
+		productsTypesCurrentLi = document.querySelector(`ul.productsTypes li[data-tab-index="${JSON.parse(localStorage.getItem('lastActiveIndex'))}"]`);
+	productsTypesActiveLi.classList.remove('active');
+	productsTypesCurrentLi.classList.add('active');
 }else{
 	localStorage.setItem('lastActiveIndex','0');
+}
+
+//update products when reload
+if(localStorage.getItem('lastActiveProductsType') != null){
+
 }
 
 /*
