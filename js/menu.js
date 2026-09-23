@@ -64,7 +64,7 @@ var BreakFast = [
     id: 71,
     name: "Sweet Savory Breakfast Toast",
     images: ["BF-7.jpg"],
-    price: 31.2,
+    price: 40.5,
     type: "BreakFast",
     miniDescription:
       "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",

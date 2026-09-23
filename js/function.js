@@ -13,9 +13,11 @@ function updateIndicator(newIndicator,currentSlide = null,newSlide = null){
 }
 
 function updateActive(that){
+	console.log(that);
 	let prevActive = that.closest('ul').querySelector('.active');
 	prevActive.classList.remove('active');
 	that.classList.add('active');
+	updateActiveLiWhenLoad(that.getAttribute('data-tab-index'),that.getAttribute('data-type-name'));
 }
 
 function showProducts(that,type){
@@ -36,7 +38,6 @@ function showProducts(that,type){
 			break;
 	}
 	MenuRow.innerHTML = "";
-	console.log(products + "before fns");
 	if(isEven(products.length) == true){//the 2 parts have the same number of products
 		addPartMenu(products,1,Math.floor(products.length / 2),true);
 		addPartMenu(products,2,Math.floor(products.length / 2),true);
@@ -58,16 +59,12 @@ function addPartMenu(currentProducts,p,numOfProductsInPart,isEven){//p = 1 -->co
 }
 
 function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
-	console.log(productsInPart);
 	let newRow = '',
 		startIndex = (isEven == true) ? ( (p == 1) ? 0 : Math.floor(numOfProductsInPart ) ) : ( (p == 1) ? 0 : Math.floor(numOfProductsInPart + 1 ) ),
 		endIndex;
 		if(p == 1){
-			console.log('we are in part 1');
-			console.log(`num is ${numOfProductsInPart}`);
 			endIndex = (isEven == true) ? (productsInPart.length - numOfProductsInPart) : (productsInPart.length - numOfProductsInPart + 1);
 			for(let i = startIndex ; i < endIndex; i++){
-				console.log(i);
 				newRow += `
 					<div class="row new-product" data-product-id="${productsInPart[i].id}">
 						<div class="col-lg-3">
@@ -97,17 +94,11 @@ function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
 					</div>
 				`;
 			}
-			console.log("done loop of part1");
 
 		}else if(p == 2){
-			console.log('we are in part 2');
-			console.log(`num is ${numOfProductsInPart}`);
-			console.log(startIndex);
 
 			endIndex = (isEven == true) ? (numOfProductsInPart * 2 ) : (numOfProductsInPart * 2 + 1);
-			console.log(endIndex);
 			for(let i = startIndex ; i < endIndex ; i++){
-				console.log(i);
 				newRow += `
 					<div class="row new-product" data-product-id="${productsInPart[i].id}">
 						<div class="col-lg-3">
@@ -139,7 +130,6 @@ function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
 			}
 		}
 	
-	console.log("done loop of part2");
 	return newRow;
 }
 
@@ -149,7 +139,6 @@ function isEven(num){
 	}else if(num % 2 != 0){
 		return false;
 	}else{
-		console.log('num is zero , so not even or odd');
 		return -1;
 	}
 }
@@ -229,4 +218,9 @@ function closePopup(popupName){
 	setTimeout(function(){
 		popupEle.classList.remove('active');	
 	},1000);
+}
+
+function updateActiveLiWhenLoad(lastActiveIndex,lastActiveProductsType){
+	localStorage.setItem('lastActive',JSON.stringify(lastActiveIndex));
+	localStorage.setItem('lastActiveProductsType',JSON.stringify(lastActiveProductsType));
 }
