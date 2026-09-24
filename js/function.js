@@ -13,7 +13,6 @@ function updateIndicator(newIndicator,currentSlide = null,newSlide = null){
 }
 
 function updateActive(that){
-	console.log(that);
 	let prevActive = that.closest('ul').querySelector('.active');
 	prevActive.classList.remove('active');
 	that.classList.add('active');
@@ -39,23 +38,36 @@ function showProducts(that = null,type){
 	}
 	MenuRow.innerHTML = "";
 	if(isEven(products.length) == true){//the 2 parts have the same number of products
-		addPartMenu(products,1,Math.floor(products.length / 2),true);
-		addPartMenu(products,2,Math.floor(products.length / 2),true);
+		addPartMenu(products,1,Math.floor(products.length / 2),true,typeName);
+		addPartMenu(products,2,Math.floor(products.length / 2),true,typeName);
 	}else if(isEven(products.length) == false){//the 2 parts doesnt have the same number of products(first part take length/2 +1 from products , part2 take length/2 from products)
-		addPartMenu(products,1,Math.floor(( (products.length - 1) / 2 ) + 1),false);
-		addPartMenu(products,2,Math.floor(products.length / 2),false);
+		addPartMenu(products,1,Math.floor(( (products.length - 1) / 2 ) + 1),false,typeName);
+		addPartMenu(products,2,Math.floor(products.length / 2),false,typeName);
 	}
+
+	makeActiveThenShow(1,typeName);
+	makeActiveThenShow(2,typeName);
 
 }
 
-function addPartMenu(currentProducts,p,numOfProductsInPart,isEven){//p = 1 -->col-lg-6 part1 pe-5 , p=2 --> col-lg-6 part2 ps-5 (1 difference)
-	MenuRow.innerHTML += `
-		<div class="col-lg-6 ${(p == 1) ? 'part1 pe-5' : 'part2 ps-5' } ">
-			<div class="item">
+function makeActiveThenShow(p,typeName){
+	productContent = null;
+	productContent = document.querySelector(`.part${p}[data-product-type="${typeName}"] .product-content`);
+	productContent.classList.add('active');
+	setTimeout(function(){
+		productContent.classList.add('show');
+	},1000);
+
+}
+
+function addPartMenu(currentProducts,p,numOfProductsInPart,isEven,typeName){//p = 1 -->col-lg-6 part1 pe-5 , p=2 --> col-lg-6 part2 ps-5 (1 difference)
+	MenuRow.insertAdjacentHTML('beforeend',`
+		<div class="col-lg-6 part ${(p == 1) ? 'part1 pe-5' : 'part2 ps-5' } " data-product-type="${typeName}">
+			<div class="item product-content">
 			${prepareNewProduct(currentProducts,numOfProductsInPart,p,isEven)}
 			</div>
 		</div>
-	` ;
+		`);//didnt use innerHTML because it remove copy of part1 and add p1 ,p2 so removed show from p1
 }
 
 function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
@@ -69,7 +81,7 @@ function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
 					<div class="row new-product img-container-parent" data-product-id="${productsInPart[i].id}">
 						<div class="col-lg-3">
 							<div class="item img-container rounded-4">
-									<i class="fa-regular fa-square-plus open"></i>
+									<i class="fa-regular fa-square-plus open" onclick="showProductsInPopup(this)"></i>
 								<img src="images/${productsInPart[i].images[0]}" alt="${productsInPart[i].images[0]}" class="img-fluid">
 							</div>
 						</div>
@@ -104,7 +116,7 @@ function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
 					<div class="row new-product img-container-parent" data-product-id="${productsInPart[i].id}">
 						<div class="col-lg-3">
 							<div class="item img-container rounded-4">
-									<i class="fa-regular fa-square-plus open"></i>
+									<i class="fa-regular fa-square-plus open" onclick="showProductsInPopup(this)"></i>
 								<img src="images/${productsInPart[i].images[0]}" alt="${productsInPart[i].images[0]}" class="img-fluid">
 							</div>
 						</div>
@@ -145,10 +157,114 @@ function isEven(num){
 	}
 }
 
+function showProductsInPopup(that){
+	let productId = that.closest('.new-product').getAttribute('data-product-id'),
+		productsType = that.closest('.part').getAttribute('data-product-type'),
+		product,
+		productIndex,
+		productsLength;
+
+	let arrInfo = updatePopupProduct(products,product,productId,productsType,productIndex,productsLength);
+	products = arrInfo[0];
+	product = arrInfo[1];
+	productIndex = arrInfo[2];
+	productsLength = arrInfo[3];
+	openPopup('product');
+	popupProductBox.onclick = function(e){
+		if(e.target.closest('.prev')){
+			let prevButtonInPopup = document.querySelector('.popup[data-popup-name="product"] .prev'),
+				prevIndex = (--productIndex),
+				currentIndex = ( prevIndex == -1) ? (products.length - 1) : (prevIndex);
+
+		arrInfo = updatePopupProduct(products,products[currentIndex],products[currentIndex].id,products[currentIndex].type,currentIndex,products.length);
+		products = arrInfo[0];
+		product = arrInfo[1];
+		productIndex = arrInfo[2];
+		productsLength = arrInfo[3];
+		
+		}else if(e.target.closest('.next')){
+			let nextButtonInPopup = document.querySelector('.popup[data-popup-name="product"] .next'),
+				nextIndex = (++productIndex),
+				currentIndex = ( nextIndex == (products.length) ) ? 0 : nextIndex;
+
+		arrInfo = updatePopupProduct(products,products[currentIndex],products[currentIndex].id,products[currentIndex].type,currentIndex,products.length);
+		products = arrInfo[0];
+		product = arrInfo[1];
+		productIndex = arrInfo[2];
+		productsLength = arrInfo[3];
+		
+		}
+	};
+
+
+}
+
+function updatePopupProduct(products,product,productId,productsType,productIndex = undefined,productsLength){
+	switch(productsType) {
+		case 'BreakFast':
+			products = BreakFast;
+			 if(productIndex == undefined){
+			 	productIndex = getProductIndex(BreakFast,productId);
+			 }
+			 product = products[productIndex];
+			 productsLength = BreakFast.length;
+			break;
+		case 'Lunch':
+			products = Lunch;
+			if(productIndex == undefined){
+			 	productIndex = getProductIndex(Lunch,productId);
+			 }
+			 product = products[productIndex];
+			 productsLength = Lunch.length;
+			break;
+		case 'Dinner':
+			products = Dinner;
+			if(productIndex == undefined){
+			 	productIndex = getProductIndex(Dinner,productId);
+			 }
+			 product = products[productIndex];
+			 productsLength = Dinner.length;
+			break;
+		case 'Drinks':
+			products = Drinks;
+			if(productIndex == undefined){
+			 	productIndex = getProductIndex(Drinks,productId);
+			 }
+			 product = products[productIndex];
+			 productsLength = Drinks.length;
+			break;
+	}
+
+	popupProductBody.innerHTML = '';
+	popupProductBody.innerHTML += `
+		<h2 class="text-center mb-4">${product.name}</h2>
+			<div class="image mb-3">
+				<img src="images/${product.images[0]}" alt="" class="img-fluid">
+				<div class="price">$${product.price}</div>
+				<button class="prev"><i class="fa-solid fa-chevron-left"></i></button>
+				<button class="next"><i class="fa-solid fa-chevron-right"></i></button>
+			</div>
+			<p>${product.description}</p>
+	`;
+
+	let arr = [];
+	arr.push(products,product,productIndex,productsLength);
+	return arr;
+
+}
+
 function showNavLinks(){
 	navUlAnchor.innerHTML += `
 		${prepareNavLi(navLiEleAnchors)}
 	`;
+}
+
+function getProduct(products,productId){
+	return (products.filter((product) => product.id == productId))[0];
+}
+
+function getProductIndex(products,productId){
+	return products.indexOf(getProduct(products,productId));
 }
 
 function prepareNavLi(navLiEleAnchors){

@@ -205,12 +205,12 @@ header #sc_carousel .sc-carousel-item button i{
 	color: var(--main-color);
 }
 
-header button.prev{
+button.prev{
 	left: 30px;
 }
 
-header button.prev,
-header button.next{
+button.prev,
+button.next{
 	transform: rotate(45deg);
 	border-radius: 0;
 	padding: 8px 11px;
@@ -222,20 +222,30 @@ header button.next{
 	transition-duration: 0.5s;
 }
 
+.popup button.prev,
+.popup button.next{
+	background-color: var(--main-color);
+}
+
 header button.prev:hover,
 header button.next:hover{
 	background-color: var(--main-color);
 }
 
-header button.next{
+button.next{
 	right: 30px;
 }
 
-header button.prev i,
-header button.next i{
+button.prev i,
+button.next i{
 	transform: rotate(-45deg);
 	color: var(--main-color);
 	transition-duration: 0.5s;
+}
+
+.popup button.prev i,
+.popup button.next i{
+	color: #fff;
 }
 
 header button.prev:hover i,
@@ -538,6 +548,61 @@ header .book-table-button p{
 #Menu .content .row.new-product{
 	margin-bottom: 40px;
 }
+
+.part1 .product-content,
+.part2 .product-content{
+	display: none;
+	opacity: 0;
+	transition-duration: 0.5s;
+}
+
+.part1 .product-content.active,
+.part2 .product-content.active{
+	display: block;
+}
+
+.part1 .product-content.show,
+.part2 .product-content.show{
+	opacity: 1;
+}
+
+.part1 .product-content .row.new-product,
+.part2 .product-content .row.new-product{
+	transform: translate(-50px, -50px);
+	opacity: 0;
+	transition-duration: 1s;
+}
+
+.part1 .product-content .row.new-product:nth-of-type(2){
+	transition-delay: 0.3s;
+}
+
+.part2 .product-content .row.new-product:nth-of-type(1){
+	transition-delay: 0.8s;
+}
+
+.part2 .product-content .row.new-product:nth-of-type(2){
+	transition-delay: 1s;
+}
+
+.part1 .product-content .row.new-product:nth-of-type(3){
+	transition-delay: 0.5s;
+}
+
+.part1 .product-content .row.new-product:nth-of-type(3){
+	transition-delay: 0.7s;
+}
+
+.part2 .product-content .row.new-product:nth-of-type(3){
+	transition-delay: 1.2s;
+}
+
+.part1 .product-content.show .row.new-product,
+.part2 .product-content.show .row.new-product{
+	transform: translate(0px);
+	opacity: 1;
+}
+
 
 #Menu .content .img-container{
 	position: relative;
@@ -861,14 +926,15 @@ header .book-table-button p{
 	color: var(--main-color);
 }
 
-.popup.nav-popup{
+.popup.nav-popup,
+.popup{
 	background-color: rgba(228, 197, 144, 0.5);
 	transition-duration: 0.5s;
 	position: fixed;
 }
 
 .nav-popup .popupBox{
-	background-color: #0e0d0c;
+	background-color: var(--bg-color);
 	background-image: url('../images/bg.png');
 	width: 400px;
 	position: absolute;
@@ -876,6 +942,75 @@ header .book-table-button p{
 	top: 0;
 	left: -100%;
 	transition-duration: 1s;
+}
+
+.popup[data-popup-name="product"]{
+	justify-content: center;
+	align-items: center;
+}
+
+.popup[data-popup-name="product"].active{
+	display: flex;
+}
+
+.popup[data-popup-name="product"].show .box{
+	transform: translateY(0px);
+}
+
+.popup[data-popup-name="product"] .box{
+	
+	width: 600px;
+	background-color: var(--bg-color);
+	position: absolute;
+	top: 5%;
+	transform: translateY(-110%);
+	z-index: 300;
+	display: block;
+	transition-duration: 1s;
+}
+
+.popup[data-popup-name="product"] .box i.close{
+	position: absolute;
+	top: 15px;
+	right: 10px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.popup[data-popup-name="product"] .box .body,
+.popup[data-popup-name="product"] .box i.close{
+	padding: 0 28px;
+	color: #fff;
+}
+
+.popup[data-popup-name="product"] .box .body h2{
+	font-size: 40px;
+}
+
+.popup[data-popup-name="product"] .box p{
+	color: var(--first-color);
+}
+
+.popup[data-popup-name="product"] .image{
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+}
+
+.popup[data-popup-name="product"] .image img{
+	border-radius: 10px;
+}
+
+.popup[data-popup-name="product"] .image .price{
+	position: absolute;
+	top: 20px;
+	right: 0px;
+	padding: 10px;
+	background-color: var(--main-color);
+	color: #fff;
+	font-weight: bold;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
 }
 
 .nav-popup.show .popupBox{

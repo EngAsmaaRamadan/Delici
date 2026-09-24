@@ -4,7 +4,7 @@ let sc_carousel = document.querySelector('#sc_carousel'),
 	circleIndicators = sc_carousel.querySelectorAll('.circle-indicators li'),
 	navUlAnchor = document.querySelector('.nav-popup ul.navbar-nav'),
 	navLiEleAnchors = document.querySelectorAll('nav .nav-item .nav-link'),
-	popupBoxes = document.querySelectorAll('.popupBox'),
+	popupBoxes = document.querySelectorAll('.popupBox,.popup .box'),
 	MenuRow = document.querySelector('#Menu .row'),
 	MenuRowPart1 = MenuRow.querySelector('.part1'),
 	MenuRowPart2 = MenuRow.querySelector('.part2'),
@@ -12,7 +12,11 @@ let sc_carousel = document.querySelector('#sc_carousel'),
 	navEle = document.querySelector('nav'),
 	scrollYPixels = window.scrollY,
 	loadingPage = document.querySelector('.loadingPage'),
-	productsTypesLis = document.querySelectorAll('ul.productsTypes li');
+	productsTypesLis = document.querySelectorAll('ul.productsTypes li'),
+	productContent,
+	products = [],
+	popupProductBox = document.querySelector('.popup[data-popup-name="product"] .box'),
+	popupProductBody = popupProductBox.querySelector('.body');
 
 //update active li
 if(localStorage.getItem('lastActiveIndex') != null){
