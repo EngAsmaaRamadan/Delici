@@ -13,7 +13,6 @@ let sc_carousel = document.querySelector('#sc_carousel'),
 	scrollYPixels = window.scrollY,
 	loadingPage = document.querySelector('.loadingPage'),
 	productsTypesLis = document.querySelectorAll('ul.productsTypes li'),
-	productContent,
 	products = [],
 	popupProductBox = document.querySelector('.popup[data-popup-name="product"] .box'),
 	popupProductBody = popupProductBox.querySelector('.body');

@@ -51,10 +51,10 @@ function showProducts(that = null,type){
 }
 
 function makeActiveThenShow(p,typeName){
-	productContent = null;
-	productContent = document.querySelector(`.part${p}[data-product-type="${typeName}"] .product-content`);
+	let productContent = document.querySelector(`.part${p}[data-product-type="${typeName}"] .product-content`);
 	productContent.classList.add('active');
 	setTimeout(function(){
+		console.log(productContent);
 		productContent.classList.add('show');
 	},1000);
 
