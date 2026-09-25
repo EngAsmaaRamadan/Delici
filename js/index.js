@@ -31,11 +31,9 @@ if(localStorage.getItem('lastActiveIndex') != null){
 //update products when reload
 if(localStorage.getItem('lastActiveProductsType') != null){
 	showProducts(null,JSON.parse(localStorage.getItem('lastActiveProductsType')));
+}else{
+	showProducts(null,'BreakFast');
 }
-
-popupTableFormButton.addEventListener('click',function(e){
-	e.preventDefault();
-});
 
 /*
 window.addEventListener('DOMContentLoaded',function(){
@@ -92,4 +90,8 @@ popupBoxes.forEach(function(popupBox){
 	popupBox.addEventListener('click',function(e){
 		e.stopPropagation();
 	});
+});
+
+popupTableFormButton.addEventListener('click',function(e){
+	e.preventDefault();
 });
