@@ -15,6 +15,7 @@ let sc_carousel = document.querySelector('#sc_carousel'),
 	productsTypesLis = document.querySelectorAll('ul.productsTypes li'),
 	products = [],
 	popupProductBox = document.querySelector('.popup[data-popup-name="product"] .box'),
+	popupTableFormButton = document.querySelector('.popup[data-popup-name="table"] form button'),
 	popupProductBody = popupProductBox.querySelector('.body');
 
 //update active li
@@ -31,6 +32,10 @@ if(localStorage.getItem('lastActiveIndex') != null){
 if(localStorage.getItem('lastActiveProductsType') != null){
 	showProducts(null,JSON.parse(localStorage.getItem('lastActiveProductsType')));
 }
+
+popupTableFormButton.addEventListener('click',function(e){
+	e.preventDefault();
+});
 
 /*
 window.addEventListener('DOMContentLoaded',function(){

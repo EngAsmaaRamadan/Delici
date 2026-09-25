@@ -894,29 +894,30 @@ header .book-table-button p{
 	color: var(--first-color);
 }
 
-#ContactUs .content form textarea{
+form textarea{
 	resize: none;
 }
 
-#ContactUs .content form .input_group{
+form .input_group{
 	display: flex;
 }
 
-#ContactUs .content form .input_group .input,
-#ContactUs .content form textarea.form-control{
+form .input_group .input,
+form textarea.form-control{
 	background-color: transparent;
 	color: var(--first-color);
 	border: 1px solid var(--first-color);
 }
 
-#ContactUs .content form .input_group .input:focus,
-#ContactUs .content form textarea.form-control:focus{
+form .input_group .input:focus,
+form textarea.form-control:focus{
 	border: 1.5px solid var(--main-color);
+	background-color: transparent;
 	box-shadow: 0 0 0 0.5px var(--main-color);
 }
 
-#ContactUs .content form .input_group .input::placeholder,
-#ContactUs .content form textarea.form-control::placeholder{
+form .input_group .input::placeholder,
+form textarea.form-control::placeholder{
 	color: var(--first-color);
 }
 
@@ -948,20 +949,31 @@ header .book-table-button p{
 	transition-duration: 1s;
 }
 
-.popup[data-popup-name="product"]{
+.popup[data-popup-name="product"],
+.popup[data-popup-name="table"]{
 	justify-content: center;
 	align-items: center;
 }
 
-.popup[data-popup-name="product"].active{
+.popup[data-popup-name="table"] button{
+	position: relative;
+	bottom: 2%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.popup[data-popup-name="product"].active,
+.popup[data-popup-name="table"].active{
 	display: flex;
 }
 
-.popup[data-popup-name="product"].show .box{
+.popup[data-popup-name="product"].show .box,
+.popup[data-popup-name="table"].show .box{
 	transform: translateY(0px);
 }
 
-.popup[data-popup-name="product"] .box{
+.popup[data-popup-name="product"] .box,
+.popup[data-popup-name="table"] .box{
 	
 	width: 600px;
 	background-color: var(--bg-color);
@@ -973,7 +985,17 @@ header .book-table-button p{
 	transition-duration: 1s;
 }
 
-.popup[data-popup-name="product"] .box i.close{
+.popup[data-popup-name="table"] a{
+	color: var(--main-color);
+	text-decoration: none;
+}
+
+.popup[data-popup-name="table"] .box{
+	background-color: var(--bg-color2);
+}
+
+.popup[data-popup-name="product"] .box i.close,
+.popup[data-popup-name="table"] .box i.close{
 	position: absolute;
 	top: 15px;
 	right: 10px;
@@ -982,16 +1004,20 @@ header .book-table-button p{
 }
 
 .popup[data-popup-name="product"] .box .body,
-.popup[data-popup-name="product"] .box i.close{
+.popup[data-popup-name="product"] .box i.close,
+.popup[data-popup-name="table"] .box .body,
+.popup[data-popup-name="table"] .box i.close{
 	padding: 0 28px;
 	color: #fff;
 }
 
-.popup[data-popup-name="product"] .box .body h2{
+.popup[data-popup-name="product"] .box .body h2,
+.popup[data-popup-name="table"] .box .body h2{
 	font-size: 40px;
 }
 
-.popup[data-popup-name="product"] .box p{
+.popup[data-popup-name="product"] .box p,
+.popup[data-popup-name="table"] .box p{
 	color: var(--first-color);
 }
 

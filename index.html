@@ -120,8 +120,8 @@
 				<li class="rounded-circle" data-index="3"></li>
 			</ul>
 			<div class="BookTable">
-				<div class="square-rotate"></div>
-				<div class="book-table-button py-lg-2">
+				<div class="square-rotate" onclick="openPopup('table');"></div>
+				<div class="book-table-button py-lg-2" onclick="openPopup('table');">
 					<img src="images/book-icon-1.png" class="mt-1 mt-lg-0" alt="booking">
 					<p class="mb-0">BOOK A<br> TABLE</p>
 				</div>
@@ -389,7 +389,50 @@
 		</div>
 		
 				<div class="body">
-					
+				</div>
+	</div>		
+	</div>
+</div>
+
+<div class="popup" data-popup-name="table" onclick="closePopup('table');">
+	<div class="box rounded-3 py-4">
+		<i class="fa-regular fa-circle-xmark close" onclick="closePopup('table');"></i>
+	<div class="container">
+		<div class="head">
+			<div class="title mb-3 text-center">
+					<h6>RESERVATION</h6>
+					<img src="images/separator.svg" alt="separator, title img">
+				</div>
+				
+		</div>
+		
+				<div class="body">
+					<h2 class="text-center mb-4">Book A Table</h2>
+					<p class="text-center">Restaurant will be open for all days, Sunday night will be closed, All booking payment is secured with credit card, no charges will be aplly for online booking. no refundable.</p>
+					<p class="text-center mb-5">Booking request <a href="tel:+201021080042">+20-102-108-0042</a> or fill out the order form</p>
+
+					<form action="">
+						<div class="row input_group">
+			    		<div class="col-lg-6 mb-4">
+			    	<input type="text" name="name" placeholder="Reservation Name..." class="input form-control">
+			    		</div>
+			    		<div class="col-lg-6 mb-4">
+			    			<input type="text" name="phone" placeholder="Phone Number..." class="input form-control">
+			    		</div>
+			    	</div>
+
+			    	<div class="row input_group">
+			    		<div class="col-lg-6 mb-4">
+			    	<input type="number" min="1" name="seats" placeholder="Seats..." class="input form-control">
+			    		</div>
+			    		<div class="col-lg-6 mb-4">
+			    			<input type="datetime-local" name="date"class="input form-control">
+			    		</div>
+			    	</div>
+			    	
+			    <textarea name="message" placeholder="Note Message..." rows="5" class="input form-control mb-4"></textarea>
+			    <button class="button btn text-decoration-none"><span class="position-relative">Book A Table</span></button>
+					</form>
 				</div>
 	</div>		
 	</div>
