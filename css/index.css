@@ -311,10 +311,16 @@ header .book-table-button p{
 	font-size: 50px;
 }
 
-#AboutUs .right,
 #Menu .right-img{
 	right: 0;
 	bottom: 0;
+	transform: translateY(-20px);
+	animation-name: AboutMovingRight;
+}
+
+#AboutUs .right{
+	right: 0;
+	top: 0;
 	transform: translateY(-20px);
 	animation-name: AboutMovingRight;
 }
@@ -331,10 +337,16 @@ header .book-table-button p{
 	z-index: 1;
 }
 
-#AboutUs .left,
 #Menu .left-img{
 	left: 0;
 	top: 0;
+	transform: translateY(-10px);
+	animation-name: AboutMovingLeft;
+}
+
+#AboutUs .left{
+	left: 0;
+	bottom: 0;
 	transform: translateY(-10px);
 	animation-name: AboutMovingLeft;
 }

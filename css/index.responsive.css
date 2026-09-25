@@ -20,11 +20,25 @@
 	}
 
 	#AboutUs .title h6 {
-        font-size: 17px;
+        font-size: 15px;
     }
 
 	#AboutUs h2 {
-	    font-size: 30px;
+	    font-size: 28px;
+	}
+
+	#AboutUs p{
+		font-size: 15px;
+    	padding-inline: 40px;
+    	margin-bottom: 40px;
+	}
+
+	#AboutUs .part{
+		margin-bottom: 38px;
+	}
+
+	#AboutUs .part .product::before{
+		width: 48%;
 	}
 
 	a.button.btn{
