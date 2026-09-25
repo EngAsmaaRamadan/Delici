@@ -273,6 +273,7 @@ header .square-rotate{
 	animation-timing-function: linear;
 	animation-duration: 10s;
 	animation-iteration-count: infinite;
+	cursor: pointer;
 }
 
 header .book-table-button{
@@ -281,6 +282,7 @@ header .book-table-button{
 	position: relative;
 	width: 100px;
     height: 100px;
+    cursor: pointer;
 }
 
 header .book-table-button img{
