@@ -1,4 +1,8 @@
 @media (max-width: 1300px) {
+	.collapse:not(.show){
+		display: flex;
+	}
+
 	.title h6{
 		font-size: 15px;
 	}
@@ -55,6 +59,28 @@
 
 	header .book-table-button p{
 		font-size: 10px;
+	}
+
+	#OurChefs .title h6 {
+        font-size: 17px;
+    }
+
+    #OurChefs h2{
+    	font-size: 30px;
+    }
+
+    #OurChefs .row .item{
+    	width: 280px;
+    	margin: auto;
+    	margin-bottom: 35px;
+    }
+
+    #OurChefs h4 {
+	    font-size: 25px;
+	}
+
+	#OurChefs p.name{
+		font-size: 12px;
 	}
 
 	#ContactUs .content form{
