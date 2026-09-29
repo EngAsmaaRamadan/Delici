@@ -7,6 +7,10 @@
 		font-size: 15px;
 	}
 
+	.square{
+		padding: 3px;
+	}
+
 	header #sc_carousel .sc-carousel-item h2{
 		font-size: 30px;
 	}
@@ -75,6 +79,10 @@
 		font-size: 10px;
 	}
 
+	#Menu ul{
+		width: max-content;
+	}
+
 	#OurChefs .title h6 {
         font-size: 17px;
     }
@@ -108,6 +116,11 @@
 	button.button.btn{
 		font-size: 12px;
 		padding: 12px 40px;
+	}
+
+	#ContactUs button.button.btn {
+	    font-size: 14px;
+	    padding: 10px 40px;
 	}
 
 	#ContactUs .content footer p{
@@ -150,6 +163,18 @@
     header #sc_carousel .sc-carousel-item p {
         font-size: 14px;
     }
+
+    #Menu ul{
+		width: 100%;
+	}
+
+	#ContactUs .content form {
+        width: 400px;
+    }
+
+    #ContactUs .content footer p {
+        font-size: 16px;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1300px) {
@@ -168,11 +193,15 @@
     header .BookTable {
         bottom: 25px;
     }
+
+    #ContactUs .content form {
+        width: 500px;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1300px) {
 	nav .collapse {
-	    justify-content: end;
+	    justify-content: space-between;
 	}
 
 	nav.navbar .navbar-nav li {
