@@ -83,6 +83,10 @@
 		width: max-content;
 	}
 
+	#OurChefs{
+		padding-block: 55px 65px;
+	}
+
 	#OurChefs .title h6 {
         font-size: 17px;
     }
@@ -92,17 +96,17 @@
     }
 
     #OurChefs .row .item{
-    	width: 280px;
+    	width: 300px;
     	margin: auto;
     	margin-bottom: 35px;
     }
 
     #OurChefs h4 {
-	    font-size: 25px;
+	    font-size: 24px;
 	}
 
 	#OurChefs p.name{
-		font-size: 12px;
+		font-size: 11px;
 	}
 
 	#ContactUs .content form{
@@ -149,6 +153,18 @@
     header .BookTable {
         bottom: 30px;
     }
+
+    #OurChefs h2 {
+        font-size: 35px;
+    }
+
+     #OurChefs h4 {
+	    font-size: 25px;
+	}
+
+	#OurChefs p.name{
+		font-size: 11px;
+	}
 }
 
 @media (min-width: 577px) and (max-width: 1300px) {
@@ -167,6 +183,22 @@
     #Menu ul{
 		width: 100%;
 	}
+
+	#OurChefs .row .item {
+        width: initial;
+    }
+
+    #OurChefs .row .part:last-child .item {
+        width: 280px;
+    }
+
+	#OurChefs h2 {
+        font-size: 40px;
+    }
+
+	#OurChefs h4 {
+        font-size: 27px;
+    }
 
 	#ContactUs .content form {
         width: 400px;
@@ -194,6 +226,26 @@
         bottom: 25px;
     }
 
+    #OurChefs {
+        padding-bottom:60px;
+    }
+
+    #OurChefs .row .part:last-child .item {
+        width: initial;
+    }
+
+    #OurChefs h4 {
+        font-size: 20px;
+    }
+
+    #OurChefs p.name {
+        font-size: 10px;
+    }
+
+    #OurChefs p.lorem {
+	    font-size: 12px;
+	}
+
     #ContactUs .content form {
         width: 500px;
     }
@@ -207,10 +259,34 @@
 	nav.navbar .navbar-nav li {
 	    display: none;
 	}
+
+	#OurChefs h2 {
+        font-size: 50px;
+    }
+
+    #OurChefs h4 {
+        font-size: 29px;
+    }
+
+    #OurChefs p.name {
+        font-size: 11px;
+    }
+
+    #OurChefs p.lorem {
+        font-size: 14px;
+    }
 }
 
 @media (min-width: 1181px) and (max-width: 1300px) {
 	nav img {
 	    width: 160px;
 	}
+
+	#OurChefs .row .part .item {
+        width: 350px;
+    }
+
+    #OurChefs .row .part:last-child .item {
+        width: 350px;
+    }
 }

@@ -721,6 +721,11 @@ header .book-table-button p{
 	background-color: var(--bg-color);
 	background-image: url('../images/bg.png');
 	color: #fff;
+	padding-bottom: 75px;
+}
+
+#OurChefs h2{
+	font-size: 50px;
 }
 
 #OurChefs .image::before{
@@ -732,7 +737,7 @@ header .book-table-button p{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	background-color: #fff3;
+	background-color: rgba(255,255,255,0.5);
 	transition-duration: 0.5s;
 }
 
@@ -837,7 +842,7 @@ header .book-table-button p{
 #OurChefs p.name{
 	color: var(--main-color);
 	letter-spacing: 5px;
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 900;
 }
 
