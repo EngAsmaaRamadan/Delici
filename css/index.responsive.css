@@ -23,6 +23,30 @@
 		display: none;
 	}
 
+	header .BookTable{
+		bottom: 45px;
+    	left: 30px;
+	}
+
+	header .square-rotate{
+		width: 80px;
+		height: 80px;
+	}
+
+	header .book-table-button{
+		padding-inline: 0;
+		width: 80px;
+    	height: 80px;
+	}
+
+	header .book-table-button img {
+	    width: 33px;
+	}
+
+	header .book-table-button p{
+		font-size: 10px;
+	}
+
 	#AboutUs .title h6 {
         font-size: 15px;
     }
@@ -55,28 +79,14 @@
 	    right: 30px;
 	}
 
-	header .BookTable{
-		bottom: 45px;
-    	left: 30px;
+	#SpecialDish h2 {
+	    font-size: 30px;
 	}
 
-	header .square-rotate{
-		width: 80px;
-		height: 80px;
-	}
-
-	header .book-table-button{
-		padding-inline: 0;
-		width: 80px;
-    	height: 80px;
-	}
-
-	header .book-table-button img {
-	    width: 33px;
-	}
-
-	header .book-table-button p{
-		font-size: 10px;
+	#SpecialDish p {
+	    font-size: 14px;
+	    padding-right: 52px;
+	    width: initial;
 	}
 
 	#Menu ul{
