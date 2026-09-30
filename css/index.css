@@ -515,10 +515,15 @@ header .book-table-button p{
 	position: relative;
 }
 
+#SpecialDish .part21 .item{
+	width: 62%;
+	margin-bottom: 30px;
+}
+
 #SpecialDish .item-moving{
 	position: absolute;
-	top: 15%;
-	left: 9%;
+	top: 18%;
+	left: 13%;
 	animation-name: specialDishMovingImg;
 	animation-timing-function: linear;
 	animation-duration: 2s;
@@ -531,8 +536,8 @@ header .book-table-button p{
 }
 
 #SpecialDish p{
-	line-height: 2;
-	width: 80%;
+	line-height: 30px;
+	width: 97%;
 }
 
 #SpecialDish h5:first-child{
