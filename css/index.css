@@ -508,11 +508,11 @@ header .book-table-button p{
     position: relative;
 }
 
-#SpecialDish .part21{
+/*#SpecialDish .part21{
 	padding: 48px;
-}
+}*/
 
-#SpecialDish .row.inside .part1 .item{
+#SpecialDish .row.inside .item-moving{
 	position: absolute;
 	top: 15%;
 	left: 9%;
