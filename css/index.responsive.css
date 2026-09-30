@@ -83,19 +83,19 @@
         font-size: 17px;
     }
 
-    #SpecialDish .part11 .item{
+    #SpecialDish .part21 .item{
     	padding-left: 48px;
     }
 
-    #SpecialDish .part11{
+    #SpecialDish .part21{
     	padding-bottom: 40px;
     }
 
-    #SpecialDish .row.inside{
+    #SpecialDish .part21{
     	padding-left: 1.5rem;
     }
 
-    #SpecialDish .row.inside .item-moving{
+    #SpecialDish .item-moving{
     	top: 7%;
     }
 
@@ -105,7 +105,7 @@
 
 	#SpecialDish p {
 	    font-size: 14px;
-	    padding-right: 52px;
+	    padding-right: 64px;
 	    width: initial;
 	}
 
@@ -192,13 +192,18 @@
         font-size: 35px;
     }
 
-    #SpecialDish .row.inside .item-moving {
+    #SpecialDish .item-moving {
     	left: 8%;
 	}
+
+	#SpecialDish .part21 .item {
+        padding-left: 60px;
+    }
 
     #SpecialDish p {
         padding-right: 60px;
         line-height: 30px;
+        width: 95%;
     }
 
     #OurChefs h2 {
@@ -227,17 +232,17 @@
         font-size: 14px;
     }
 
-    #SpecialDish .part11 {
+    #SpecialDish .part21 {
         padding-left: 0;
     }
 
-    #SpecialDish .part11 .item {
+    #SpecialDish .part21 .item {
         width: 400px;
         margin: auto;
-        padding-left: initial;
+        padding-left: 8px;
     }
 
-    #SpecialDish .row.inside .item-moving {
+    #SpecialDish .item-moving {
         left: 14%;
     }
 
@@ -248,6 +253,10 @@
     #SpecialDish p {
         padding-right: initial;
         width: initial;
+    }
+
+    #SpecialDish a.button.btn {
+        font-size: 14px;
     }
 
     #Menu ul{
@@ -296,17 +305,18 @@
         bottom: 25px;
     }
 
-    #SpecialDish .row.inside {
+    #SpecialDish .part21 {
         padding-left: 65px;
     }
 
-    #SpecialDish .row.inside .item-moving {
+    #SpecialDish .item-moving {
         left: 6%;
         top: 18%;
     }
 
-    #SpecialDish a.button.btn {
-        font-size: 14px;
+    #SpecialDish .part21 .item {
+        width: initial;
+        padding-left: 64px;
     }
 
     #SpecialDish h2 {
@@ -321,7 +331,7 @@
         width: 82%;
     }
 
-    #SpecialDish .part11 {
+    #SpecialDish .part21 {
         padding-left: 0;
         display: flex;
     }
@@ -360,16 +370,21 @@
 	    display: none;
 	}
 
-	#SpecialDish .row.inside {
+	#SpecialDish .part12 {
         padding-left: 50px;
     }
 
-    #SpecialDish .part11 {
+    #SpecialDish .part21 {
         padding-bottom: 0;
     }
 
-    #SpecialDish .row.inside .item-moving {
-        left: 2%;
+    #SpecialDish .part21 .item {
+        width: 90%;
+        margin-top: 95px;
+    }
+
+    #SpecialDish .item-moving {
+        left: 9%;
         top: 20%;
     }
 
@@ -378,11 +393,7 @@
     }
 
 	#SpecialDish p {
-        width: 88%;
-    }
-
-    #SpecialDish .part21{
-    	/*padding: 48px;*/
+        width: 85%;
     }
 
 	#OurChefs h2 {
@@ -407,21 +418,25 @@
 	    width: 160px;
 	}
 
-	#SpecialDish .row.inside {
+	#SpecialDish .part21 {
         padding-left: 0;
     }
 
-    #SpecialDish .part11 .item {
-        width: 56%;
-        margin: 95px auto;
+    #SpecialDish .part21 .item {
+        width: 76%;
+    }
+
+    #SpecialDish h5:last-child {
+        font-size: 28px;
     }
 
     #SpecialDish p {
-        width: 100%;
+        width: 85%;
     }
 
-    #SpecialDish .row.inside .item-moving {
+    #SpecialDish .item-moving {
         left: 15%;
+        top: 21%;
     }
 
 	#OurChefs .row .part .item {

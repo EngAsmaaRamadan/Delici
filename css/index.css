@@ -504,15 +504,18 @@ header .book-table-button p{
 	background-position: center;
 }
 
-#SpecialDish .row.inside{
+#SpecialDish .part12{
     position: relative;
 }
 
-/*#SpecialDish .part21{
-	padding: 48px;
-}*/
+#SpecialDish .part21{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
 
-#SpecialDish .row.inside .item-moving{
+#SpecialDish .item-moving{
 	position: absolute;
 	top: 15%;
 	left: 9%;
