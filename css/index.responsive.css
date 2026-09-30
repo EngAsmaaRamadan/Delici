@@ -79,6 +79,26 @@
 	    right: 30px;
 	}
 
+	#SpecialDish .title h6 {
+        font-size: 17px;
+    }
+
+    #SpecialDish .part11 .item{
+    	padding-left: 48px;
+    }
+
+    #SpecialDish .part11{
+    	padding-bottom: 40px;
+    }
+
+    #SpecialDish .row.inside{
+    	padding-left: 1.5rem;
+    }
+
+    #SpecialDish .row.inside .part1 .item{
+    	top: 7%;
+    }
+
 	#SpecialDish h2 {
 	    font-size: 30px;
 	}
@@ -87,6 +107,10 @@
 	    font-size: 14px;
 	    padding-right: 52px;
 	    width: initial;
+	}
+
+	#SpecialDish h5:last-child {
+	    font-size: 25px;
 	}
 
 	#Menu ul{
@@ -164,6 +188,19 @@
         bottom: 30px;
     }
 
+    #SpecialDish h2 {
+        font-size: 35px;
+    }
+
+    #SpecialDish .row.inside .part1 .item {
+    	left: 8%;
+	}
+
+    #SpecialDish p {
+        padding-right: 60px;
+        line-height: 30px;
+    }
+
     #OurChefs h2 {
         font-size: 35px;
     }
@@ -188,6 +225,29 @@
 
     header #sc_carousel .sc-carousel-item p {
         font-size: 14px;
+    }
+
+    #SpecialDish .part11 {
+        padding-left: 0;
+    }
+
+    #SpecialDish .part11 .item {
+        width: 400px;
+        margin: auto;
+        padding-left: initial;
+    }
+
+    #SpecialDish .row.inside .part1 .item {
+        left: 14%;
+    }
+
+    #SpecialDish h2 {
+        font-size: 40px;
+    }
+
+    #SpecialDish p {
+        padding-right: initial;
+        width: initial;
     }
 
     #Menu ul{
@@ -236,6 +296,27 @@
         bottom: 25px;
     }
 
+    #SpecialDish .row.inside {
+        padding-left: 65px;
+    }
+
+    #SpecialDish .row.inside .part1 .item {
+        left: 6%;
+        top: 18%;
+    }
+
+    #SpecialDish a.button.btn {
+        font-size: 14px;
+    }
+
+    #SpecialDish h2 {
+        font-size: 30px;
+    }
+
+    #SpecialDish p {
+        width: 75%;
+    }
+
     #OurChefs {
         padding-bottom:60px;
     }
@@ -270,6 +351,31 @@
 	    display: none;
 	}
 
+	#SpecialDish .row.inside {
+        padding-left: 50px;
+    }
+
+    #SpecialDish .part11 {
+        padding-bottom: 80px;
+    }
+
+    #SpecialDish .row.inside .part1 .item {
+        left: 2%;
+        top: 16%;
+    }
+
+    #SpecialDish h5:last-child {
+        font-size: 27px;
+    }
+
+	#SpecialDish p {
+        width: 88%;
+    }
+
+    #SpecialDish .part21{
+    	padding: 48px;
+    }
+
 	#OurChefs h2 {
         font-size: 50px;
     }
@@ -291,6 +397,15 @@
 	nav img {
 	    width: 160px;
 	}
+
+	#SpecialDish .part11 .item {
+    	margin: initial;
+        margin-left: auto;
+    }
+
+    #SpecialDish .row.inside .part1 .item {
+        left: 12%;
+    }
 
 	#OurChefs .row .part .item {
         width: 350px;

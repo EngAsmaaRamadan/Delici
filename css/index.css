@@ -505,10 +505,11 @@ header .book-table-button p{
 }
 
 #SpecialDish .row.inside{
-	display: flex;
-    justify-items: center;
-    align-items: center;
     position: relative;
+}
+
+#SpecialDish .part21{
+	padding: 48px;
 }
 
 #SpecialDish .row.inside .part1 .item{
