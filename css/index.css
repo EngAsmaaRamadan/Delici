@@ -185,8 +185,7 @@ header #sc_carousel .sc-carousel-item:nth-of-type(2){
 
 header #sc_carousel .sc-carousel-item:nth-of-type(3){
 	background-image: url('../images/slider-3.jpg');
-}
-
+}6px 9px
 header #sc_carousel .sc-carousel-item h2{
 	font-size: 80px;
 }
@@ -206,20 +205,25 @@ header #sc_carousel .sc-carousel-item button i{
 }
 
 button.prev{
-	left: 30px;
+	left: 28px;
 }
 
 button.prev,
 button.next{
 	transform: rotate(45deg);
 	border-radius: 0;
-	padding: 8px 11px;
+	padding: 6px 9px;
 	position: absolute;
 	background-color: transparent;
 	border: 1px solid var(--main-color);
 	top: 50%;
 	z-index: 3;
 	transition-duration: 0.5s;
+}
+
+.popup[data-popup-name="table"] .box,
+.popup[data-popup-name="product"] .box{
+    padding-block: 30px;
 }
 
 .popup button.prev,
@@ -233,7 +237,7 @@ header button.next:hover{
 }
 
 button.next{
-	right: 30px;
+	right: 28px;
 }
 
 button.prev i,

@@ -201,7 +201,7 @@
     }
 
     .popup[data-popup-name="product"] .box .body h2{
-        font-size: 25px;
+        font-size: 27px;
     }
 
     .popup[data-popup-name="product"] .image .price {
@@ -282,6 +282,18 @@
     .popup[data-popup-name="table"] .box .body h2 {
         font-size: 29px;
     }
+
+    .popup button.prev {
+        left: 18px;
+    }
+
+    .popup button.next {
+        right: 18px;
+    }
+
+    .popup[data-popup-name="product"] .box .body h2 {
+        font-size: 29px;
+    }
 }
 
 @media (min-width: 577px) and (max-width: 1300px) {
@@ -357,6 +369,30 @@
     }
 
     .popup[data-popup-name="table"] .box button.button.btn {
+        font-size: 14px;
+    }
+
+    .popup[data-popup-name="product"] .box .body {
+        padding: 0 18px;
+    }
+
+    .popup[data-popup-name="product"] .box .body h2 {
+        font-size: 32px;
+    }
+
+    .popup button.prev, .popup button.next {
+        padding: 8px 10px;
+    }
+
+    .popup button.prev {
+        left: 18px;
+    }
+
+    .popup button.next {
+        right: 18px;
+    }
+
+    .popup[data-popup-name="product"] .image .price {
         font-size: 14px;
     }
 }
@@ -438,7 +474,8 @@
         width: 500px;
     }
 
-    .popup[data-popup-name="table"] .box .body h2 {
+    .popup[data-popup-name="table"] .box .body h2,
+    .popup[data-popup-name="product"] .box .body h2  {
         font-size: 35px;
     }
 
@@ -446,8 +483,17 @@
         width: 94%;
     }
 
-    .popup[data-popup-name="table"] .box .body {
+    .popup[data-popup-name="table"] .box .body ,
+    .popup[data-popup-name="product"] .box .body {
         padding: 0 28px;
+    }
+
+    .popup button.prev {
+        left: 20px;
+    }
+
+    .popup button.next {
+        right: 20px;
     }
 }
 
@@ -502,7 +548,8 @@
         font-size: 14px;
     }
 
-    .popup[data-popup-name="table"] .box .body h2 {
+    .popup[data-popup-name="table"] .box .body h2 ,
+    .popup[data-popup-name="product"] .box .body h2{
         font-size: 38px;
     }
 }
@@ -541,7 +588,8 @@
         width: 350px;
     }
 
-    .popup[data-popup-name="table"] .box .body h2 {
+    .popup[data-popup-name="table"] .box .body h2 ,
+    .popup[data-popup-name="product"] .box .body h2{
         font-size: 40px;
     }
 }
