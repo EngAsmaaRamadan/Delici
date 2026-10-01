@@ -69,6 +69,54 @@
 		width: 48%;
 	}
 
+    #OurStory .title h6 {
+        font-size: 17px;
+    }
+
+    #OurStory h2 {
+        font-size: 30px;
+    }
+
+    #OurStory p.lorem {
+        font-size: 14px;
+        width: 82%;
+    }
+
+    #OurStory p.head {
+        font-size: 15px;
+    }
+
+    #OurStory a.button.btn {
+        font-size: 12px;
+    }
+
+    #OurStory .bg-img .right-img img:last-child,
+    #OurStory .bg-img .right-img img{
+        width: 100px;
+    }
+
+    #OurStory .bg-img .left-img img {
+        width: 160px;
+    }
+
+    #OurStory img.bg-story {
+        width: 270px;
+    }
+
+    #OurStory .bg-img .right-img img {
+        top: 5%;
+        right: 8%;
+    }
+
+    #OurStory .bg-img .left-img {
+        bottom: 5%;
+        left: 6%;
+    }
+
+    #OurStory{
+        padding-bottom: 35px;
+    }
+
 	a.button.btn{
 		padding: 10px 20px;
     	font-size: 13px;
