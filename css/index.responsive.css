@@ -220,6 +220,60 @@
     .popup button.next {
         right: 12px;
     }
+
+    #Menu .img-container {
+        width: 80px;
+        height: 80px;
+    }
+
+    .img-part {
+        padding-left: 0;
+        position: relative;
+        left: 0;
+        transform: translateY(17%);
+    }
+
+    #Menu .title h6 {
+        font-size: 17px;
+    }
+
+    #Menu ul{
+        margin-bottom: 50px;
+    }
+
+    .item.product-info h4{
+        margin-bottom: 0;
+    }
+
+    #Menu h2.h1{
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    #Menu .content>.row .part{
+        padding-inline: 40px;
+    }
+
+    #Menu .content .part .row.new-product{
+        margin-bottom: 20px;
+    }
+
+    #Menu .content .part2 .row.new-product:last-child{
+        margin-bottom: 10px;
+    }
+
+    .text-part{
+        padding-left: 30px;
+    }
+
+    #Menu h4{
+        text-align: start;
+    }
+
+    #Menu p {
+        padding-right: 0px;
+        width: 102%;
+    }
 }
 
 @media (min-width: 371px) and (max-width: 1300px) {

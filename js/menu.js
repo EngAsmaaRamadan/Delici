@@ -62,7 +62,7 @@ var BreakFast = [
   /*extra product to test*/
   {
     id: 71,
-    name: "Sweet Savory Breakfast Toast",
+    name: "Sweet Savory Toast",
     images: ["BF-7.jpg"],
     price: 40.5,
     type: "BreakFast",

@@ -62,7 +62,7 @@ function makeActiveThenShow(p,typeName){
 
 function addPartMenu(currentProducts,p,numOfProductsInPart,isEven,typeName){//p = 1 -->col-lg-6 part1 pe-5 , p=2 --> col-lg-6 part2 ps-5 (1 difference)
 	MenuRow.insertAdjacentHTML('beforeend',`
-		<div class="col-lg-6 part ${(p == 1) ? 'part1 pe-5' : 'part2 ps-5' } " data-product-type="${typeName}">
+		<div class="col-lg-6 part ${(p == 1) ? 'part1 pe-lg-5' : 'part2 ps-lg-5' } " data-product-type="${typeName}">
 			<div class="item product-content">
 			${prepareNewProduct(currentProducts,numOfProductsInPart,p,isEven)}
 			</div>
@@ -79,22 +79,22 @@ function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
 			for(let i = startIndex ; i < endIndex; i++){
 				newRow += `
 					<div class="row new-product img-container-parent" data-product-id="${productsInPart[i].id}">
-						<div class="col-lg-3">
+						<div class="col-3 img-part">
 							<div class="item img-container rounded-4">
 									<i class="fa-regular fa-square-plus open" onclick="showProductsInPopup(this)"></i>
 								<img src="images/${productsInPart[i].images[0]}" alt="${productsInPart[i].images[0]}" class="img-fluid">
 							</div>
 						</div>
-						<div class="col-lg-9 ps-0">
+						<div class="col-9 text-part">
 							<div class="item py-2">
 								<div class="row">
-									<div class="col-lg-10 pe-0">
+									<div class="col-lg-10 pe-lg-0">
 										<div class="item product-info">
 											<h4>${productsInPart[i].name}</h4>
-											<span></span>
+											<span class="d-none d-lg-block"></span>
 										</div>
 									</div>
-									<div class="col-lg-2 ps-0">
+									<div class="col-lg-2 ps-lg-0">
 										<div class="item">
 											<h4>$${productsInPart[i].price}</h4>
 										</div>
@@ -114,22 +114,22 @@ function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
 			for(let i = startIndex ; i < endIndex ; i++){
 				newRow += `
 					<div class="row new-product img-container-parent" data-product-id="${productsInPart[i].id}">
-						<div class="col-lg-3">
+						<div class="col-3 img-part">
 							<div class="item img-container rounded-4">
 									<i class="fa-regular fa-square-plus open" onclick="showProductsInPopup(this)"></i>
 								<img src="images/${productsInPart[i].images[0]}" alt="${productsInPart[i].images[0]}" class="img-fluid">
 							</div>
 						</div>
-						<div class="col-lg-9 ps-0">
+						<div class="col-9 ps-lg-0 text-part">
 							<div class="item py-2">
 								<div class="row">
-									<div class="col-lg-10 pe-0">
+									<div class="col-lg-10 pe-lg-0">
 										<div class="item product-info">
 											<h4>${productsInPart[i].name}</h4>
-											<span></span>
+											<span class="d-none d-lg-block"></span>
 										</div>
 									</div>
-									<div class="col-lg-2 ps-0">
+									<div class="col-lg-2 ps-lg-0">
 										<div class="item">
 											<h4>$${productsInPart[i].price}</h4>
 										</div>
