@@ -348,6 +348,27 @@
     .popup[data-popup-name="product"] .box .body h2 {
         font-size: 29px;
     }
+
+    #Menu .img-container {
+        width: 100px;
+        height: 100px;
+    }
+
+    #Menu .content>.row .part {
+        padding-inline: 45px;
+    }
+
+    .text-part {
+        padding-left: 35px;
+    }
+
+    .img-part{
+        transform: translateY(10%);
+    }
+
+    #Menu h2.h1 {
+        font-size: 35px;
+    }
 }
 
 @media (min-width: 577px) and (max-width: 1300px) {
