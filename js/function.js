@@ -62,7 +62,7 @@ function makeActiveThenShow(p,typeName){
 
 function addPartMenu(currentProducts,p,numOfProductsInPart,isEven,typeName){//p = 1 -->col-lg-6 part1 pe-5 , p=2 --> col-lg-6 part2 ps-5 (1 difference)
 	MenuRow.insertAdjacentHTML('beforeend',`
-		<div class="col-lg-6 part ${(p == 1) ? 'part1 pe-lg-5' : 'part2 ps-lg-5' } " data-product-type="${typeName}">
+		<div class="col-md-6 part ${(p == 1) ? 'part1 pe-md-5' : 'part2 ps-md-5' } " data-product-type="${typeName}">
 			<div class="item product-content">
 			${prepareNewProduct(currentProducts,numOfProductsInPart,p,isEven)}
 			</div>
@@ -88,13 +88,13 @@ function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
 						<div class="col-9 text-part">
 							<div class="item py-2">
 								<div class="row">
-									<div class="col-lg-10 pe-lg-0">
+									<div class="col-sm-10 pe-sm-0">
 										<div class="item product-info">
 											<h4>${productsInPart[i].name}</h4>
-											<span class="d-none d-lg-block"></span>
+											<span class="d-none d-sm-block"></span>
 										</div>
 									</div>
-									<div class="col-lg-2 ps-lg-0">
+									<div class="col-sm-2 ps-sm-0">
 										<div class="item">
 											<h4>$${productsInPart[i].price}</h4>
 										</div>
@@ -123,13 +123,13 @@ function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
 						<div class="col-9 ps-lg-0 text-part">
 							<div class="item py-2">
 								<div class="row">
-									<div class="col-lg-10 pe-lg-0">
+									<div class="col-sm-10 pe-sm-0">
 										<div class="item product-info">
 											<h4>${productsInPart[i].name}</h4>
-											<span class="d-none d-lg-block"></span>
+											<span class="d-none d-sm-block"></span>
 										</div>
 									</div>
-									<div class="col-lg-2 ps-lg-0">
+									<div class="col-sm-2 ps-sm-0">
 										<div class="item">
 											<h4>$${productsInPart[i].price}</h4>
 										</div>

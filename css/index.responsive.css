@@ -470,6 +470,19 @@
     .popup[data-popup-name="product"] .image .price {
         font-size: 14px;
     }
+
+    #Menu h2.h1 {
+        font-size: 40px;
+    }
+
+    #Menu .content>.row .part1 {
+        border-right: none;
+    }
+
+    #Menu .content .part .row.new-product ,
+    #Menu .content .part2 .row.new-product:last-child{
+        margin-bottom: 40px;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 1300px) {
@@ -542,6 +555,10 @@
 
     #ContactUs .content form {
         width: 500px;
+    }
+
+    #Menu .content>.row .part1 {
+        border-right: 2px solid #5f5f60;
     }
 
     .popup[data-popup-name="table"] .box ,
