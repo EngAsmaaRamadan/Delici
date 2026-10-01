@@ -6,7 +6,7 @@ var BreakFast = [
     price: 35.92,
     type: "BreakFast",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
   {
@@ -16,7 +16,7 @@ var BreakFast = [
     price: 38.36,
     type: "BreakFast",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
   {
@@ -26,7 +26,7 @@ var BreakFast = [
     price: 47.88,
     type: "BreakFast",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
   {
@@ -36,7 +36,7 @@ var BreakFast = [
     price: 31.95,
     type: "BreakFast",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
   {
@@ -46,7 +46,7 @@ var BreakFast = [
     price: 43.78,
     type: "BreakFast",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
   {
@@ -56,7 +56,7 @@ var BreakFast = [
     price: 31.2,
     type: "BreakFast",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
   /*extra product to test*/
@@ -67,7 +67,7 @@ var BreakFast = [
     price: 40.5,
     type: "BreakFast",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
 ];
@@ -80,7 +80,7 @@ var Lunch = [
     price: 30.43,
     type: "Lunch",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
   {
@@ -90,7 +90,7 @@ var Lunch = [
     price: 29.51,
     type: "Lunch",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
   {
@@ -100,7 +100,7 @@ var Lunch = [
     price: 31.66,
     type: "Lunch",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
   {
@@ -110,7 +110,7 @@ var Lunch = [
     price: 42.17,
     type: "Lunch",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
   {
@@ -120,7 +120,7 @@ var Lunch = [
     price: 25.22,
     type: "Lunch",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
   {
@@ -130,7 +130,7 @@ var Lunch = [
     price: 43.46,
     type: "Lunch",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
 ];
@@ -143,7 +143,7 @@ var Dinner = [
     price: 42.85,
     type: "Dinner",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
   {
@@ -153,7 +153,7 @@ var Dinner = [
     price: 49.42,
     type: "Dinner",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
   {
@@ -163,7 +163,7 @@ var Dinner = [
     price: 28.16,
     type: "Dinner",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
   {
@@ -173,7 +173,7 @@ var Dinner = [
     price: 29.0,
     type: "Dinner",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
   {
@@ -183,7 +183,7 @@ var Dinner = [
     price: 45.23,
     type: "Dinner",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
   {
@@ -193,7 +193,7 @@ var Dinner = [
     price: 26.45,
     type: "Dinner",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
 ];
@@ -206,7 +206,7 @@ var Drinks = [
     price: 36.49,
     type: "Drinks",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
   {
@@ -216,7 +216,7 @@ var Drinks = [
     price: 41.5,
     type: "Drinks",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
   {
@@ -226,7 +226,7 @@ var Drinks = [
     price: 48.14,
     type: "Drinks",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
   {
@@ -236,7 +236,7 @@ var Drinks = [
     price: 46.99,
     type: "Drinks",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
   {
@@ -246,7 +246,7 @@ var Drinks = [
     price: 43.41,
     type: "Drinks",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
   {
@@ -256,7 +256,7 @@ var Drinks = [
     price: 42.42,
     type: "Drinks",
     miniDescription:
-      "Lorem ipsum dolor, sit amet consectetur adipisicingelit. Nihil, incidunt.",
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, incidunt.",
     description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, reiciendis numquam magnam dolore ratione tenetur eos rem modi voluptates obcaecati quidem voluptate mollitia sunt aspernatur odit porro possimus ducimus, explicabo quaerat, pariatur illo praesentium non delectus inventore? Molestias porro delectus laborum perferendis ratione maxime, impedit veniam minus dolor, magnam a.`,
   },
 ];

@@ -226,11 +226,15 @@
         height: 80px;
     }
 
+    #Menu .content .img-container {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
     .img-part {
         padding-left: 0;
         position: relative;
-        left: 0;
-        transform: translateY(17%);
     }
 
     #Menu .title h6 {
@@ -362,10 +366,6 @@
         padding-left: 35px;
     }
 
-    .img-part{
-        transform: translateY(10%);
-    }
-
     #Menu h2.h1 {
         font-size: 35px;
     }
@@ -480,8 +480,17 @@
     }
 
     #Menu .content .part .row.new-product ,
-    #Menu .content .part2 .row.new-product:last-child{
+    #Menu .content .part2 .row.new-product:last-child,
+    #Menu .content .part1 .row.new-product:last-child{
         margin-bottom: 40px;
+    }
+
+    .text-part .row>div:first-child{
+        padding-right: 0;
+    }
+
+    .text-part .row>div:last-child{
+        padding-left: 0;
     }
 }
 
@@ -561,6 +570,22 @@
         border-right: 2px solid #5f5f60;
     }
 
+    #Menu p {
+        width: 115%;
+    }
+
+    #Menu .content .part2 .row.new-product:last-child, #Menu .content .part1 .row.new-product:last-child {
+        margin-bottom: 0px;
+    }
+
+    .text-part {
+        padding-left: 60px;
+    }
+
+    .text-part .row>div:last-child{
+        padding-left: 12px;
+    }
+
     .popup[data-popup-name="table"] .box ,
     .popup[data-popup-name="product"] .box{
         width: 500px;
@@ -587,6 +612,16 @@
     .popup button.next {
         right: 20px;
     }
+
+    #Menu .content>.row .part1{
+        padding-right: 70px;
+    }
+
+    #Menu .content>.row .part2{
+        padding-left: 70px;
+    }
+
+
 }
 
 @media (min-width: 992px) and (max-width: 1300px) {
@@ -640,6 +675,19 @@
         font-size: 14px;
     }
 
+    #Menu h2.h1 {
+        font-size: 50px;
+    }
+
+    #Menu .img-container {
+        width: 80px;
+        height: 80px;
+    }
+
+    .text-part {
+        padding-left: 0px;
+    }
+
     .popup[data-popup-name="table"] .box .body h2 ,
     .popup[data-popup-name="product"] .box .body h2{
         font-size: 38px;
@@ -678,6 +726,14 @@
 
     #OurChefs .row .part:last-child .item {
         width: 350px;
+    }
+
+    #Menu p {
+        width: 100%;
+    }
+
+    #Menu .content>.row .part2 {
+        padding-left: 80px;
     }
 
     .popup[data-popup-name="table"] .box .body h2 ,

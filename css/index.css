@@ -730,6 +730,15 @@ header .book-table-button p{
     padding-right: 20px;
 }
 
+#Menu .content .part2 .row.new-product:last-child,
+#Menu .content .part1 .row.new-product:last-child {
+    margin-bottom: 0px;
+}
+
+#Menu .content>.row .part2 {
+    padding-left: 50px;
+}
+
 #OurChefs{
 	background-color: var(--bg-color);
 	background-image: url('../images/bg.png');
