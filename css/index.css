@@ -1016,7 +1016,6 @@ form textarea.form-control::placeholder{
 
 .popup[data-popup-name="product"] .box,
 .popup[data-popup-name="table"] .box{
-	
 	width: 600px;
 	background-color: var(--bg-color);
 	position: absolute;
@@ -1025,6 +1024,10 @@ form textarea.form-control::placeholder{
 	z-index: 300;
 	display: block;
 	transition-duration: 1s;
+}
+
+.popup[data-popup-name="table"] .box{
+	padding-block: 30px;
 }
 
 .popup[data-popup-name="table"] a{

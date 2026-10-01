@@ -164,6 +164,35 @@
 	#ContactUs .content footer p{
 		font-size: 13px;
 	}
+
+    .popup[data-popup-name="table"] .box{
+        width: 300px;
+        padding-block: 30px;
+    }
+
+    .popup[data-popup-name="table"] .box .body{
+        padding: 0 18px;
+    }
+
+    .popup[data-popup-name="table"] .box .title h6 {
+        font-size: 17px;
+    }
+
+    .popup[data-popup-name="table"] .box .body h2 {
+        font-size: 27px;
+    }
+
+    .popup[data-popup-name="table"] .box button.button.btn {
+        padding: 10px 20px;
+    }
+
+    .popup[data-popup-name="table"] .box textarea{
+        margin-bottom: 30px;
+    }
+
+    .popup[data-popup-name="table"] .box i.close {
+        right: 5px;
+    }
 }
 
 @media (min-width: 371px) and (max-width: 1300px) {
@@ -217,6 +246,14 @@
 	#OurChefs p.name{
 		font-size: 11px;
 	}
+
+    .popup[data-popup-name="table"] .box {
+        width: 400px;
+    }
+
+    .popup[data-popup-name="table"] .box .body h2 {
+        font-size: 29px;
+    }
 }
 
 @media (min-width: 577px) and (max-width: 1300px) {
@@ -285,6 +322,14 @@
 
     #ContactUs .content footer p {
         font-size: 16px;
+    }
+
+    .popup[data-popup-name="table"] .box .body h2 {
+        font-size: 32px;
+    }
+
+    .popup[data-popup-name="table"] .box button.button.btn {
+        font-size: 14px;
     }
 }
 
@@ -359,6 +404,22 @@
     #ContactUs .content form {
         width: 500px;
     }
+
+    .popup[data-popup-name="table"] .box {
+        width: 500px;
+    }
+
+    .popup[data-popup-name="table"] .box .body h2 {
+        font-size: 35px;
+    }
+
+    .popup[data-popup-name="table"] .box p:first-child {
+        width: 94%;
+    }
+
+    .popup[data-popup-name="table"] .box .body {
+        padding: 0 28px;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1300px) {
@@ -411,6 +472,10 @@
     #OurChefs p.lorem {
         font-size: 14px;
     }
+
+    .popup[data-popup-name="table"] .box .body h2 {
+        font-size: 38px;
+    }
 }
 
 @media (min-width: 1181px) and (max-width: 1300px) {
@@ -445,5 +510,9 @@
 
     #OurChefs .row .part:last-child .item {
         width: 350px;
+    }
+
+    .popup[data-popup-name="table"] .box .body h2 {
+        font-size: 40px;
     }
 }
