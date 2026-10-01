@@ -350,6 +350,30 @@
         bottom: 30px;
     }
 
+    #OurStory h2 {
+        font-size: 35px;
+    }
+
+    #OurStory .container .row{
+        margin-inline: 0;
+    }
+
+    #OurStory .container .part{
+        padding-inline: 0;
+    }
+
+    #OurStory p.lorem {
+        width: 85%;
+    }
+
+    #OurStory a.button.btn {
+        font-size: 13px;
+    }
+
+    #OurStory .bg-img .left-img {
+        bottom: 7%;
+    }
+
     #SpecialDish h2 {
         font-size: 35px;
     }
@@ -430,6 +454,14 @@
 
     header #sc_carousel .sc-carousel-item p {
         font-size: 14px;
+    }
+
+    #OurStory h2 {
+        font-size: 40px;
+    }
+
+    #OurStory p.lorem {
+        width: 81%;
     }
 
     #SpecialDish .part21 {
@@ -559,6 +591,36 @@
         bottom: 25px;
     }
 
+    #OurStory .container .part:last-child{
+        display: flex;
+        align-items: center;
+    }
+
+    #OurStory .bg-img .right-img img:last-child, #OurStory .bg-img .right-img img {
+        width: 115px;
+    }
+
+    #OurStory .bg-img .left-img img {
+        width: 170px;
+    }
+
+    #OurStory img.bg-story {
+        width: 280px;
+    }
+
+    #OurStory .bg-img .right-img img {
+        right: 6%;
+    }
+
+    #OurStory .bg-img .left-img {
+        bottom: 5%;
+        left: 5%;
+    }
+
+    #OurStory p.lorem {
+        width: 87%;
+    }
+
     #SpecialDish .part21 {
         padding-left: 65px;
     }
@@ -681,6 +743,36 @@
 	    display: none;
 	}
 
+    #OurStory img.bg-story {
+        width: 350px;
+    }
+
+    #OurStory .bg-img .right-img img:last-child, #OurStory .bg-img .right-img img {
+        width: 120px;
+    }
+
+    #OurStory .bg-img .right-img img{
+        right: 3%;
+        top: 3%;
+    }
+
+    #OurStory .bg-img .left-img img {
+        width: 210px;
+    }
+
+    #OurStory .bg-img .left-img {
+        bottom: 3%;
+        left: 3%;
+    }
+
+    #OurStory h2 {
+        font-size: 50px;
+    }
+
+    #OurStory p.lorem {
+        width: 93%;
+    }
+
 	#SpecialDish .part12 {
         padding-left: 50px;
     }
@@ -746,6 +838,31 @@
 	nav img {
 	    width: 160px;
 	}
+
+    #OurStory img.bg-story {
+        width: 430px;
+    }
+
+    #OurStory .bg-img .right-img img:last-child, #OurStory .bg-img .right-img img {
+        width: 130px;
+    }
+
+    #OurStory .bg-img .left-img img {
+        width: 250px;
+    }
+
+    #OurStory .bg-img .right-img img {
+        top: 0%;
+    }
+
+    #OurStory .bg-img .left-img {
+        bottom: 4%;
+        left: 1%;
+    }
+
+    #OurStory p.lorem {
+        width: 95%;
+    }
 
 	#SpecialDish .part21 {
         padding-left: 0;
