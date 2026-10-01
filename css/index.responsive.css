@@ -165,12 +165,14 @@
 		font-size: 13px;
 	}
 
-    .popup[data-popup-name="table"] .box{
+    .popup[data-popup-name="table"] .box,
+    .popup[data-popup-name="product"] .box{
         width: 300px;
         padding-block: 30px;
     }
 
-    .popup[data-popup-name="table"] .box .body{
+    .popup[data-popup-name="table"] .box .body,
+    .popup[data-popup-name="product"] .box .body{
         padding: 0 18px;
     }
 
@@ -192,6 +194,31 @@
 
     .popup[data-popup-name="table"] .box i.close {
         right: 5px;
+    }
+
+    .popup[data-popup-name="product"] .title h6 {
+        font-size: 17px;
+    }
+
+    .popup[data-popup-name="product"] .box .body h2{
+        font-size: 25px;
+    }
+
+    .popup[data-popup-name="product"] .image .price {
+        font-size: 12px;
+    }
+
+    .popup button.prev, .popup button.next{
+        font-size: 12px;
+        padding: 5px 6px;
+    }
+
+    .popup button.prev {
+        left: 12px;
+    }
+
+    .popup button.next {
+        right: 12px;
     }
 }
 
@@ -247,7 +274,8 @@
 		font-size: 11px;
 	}
 
-    .popup[data-popup-name="table"] .box {
+    .popup[data-popup-name="table"] .box ,
+    .popup[data-popup-name="product"] .box{
         width: 400px;
     }
 
@@ -405,7 +433,8 @@
         width: 500px;
     }
 
-    .popup[data-popup-name="table"] .box {
+    .popup[data-popup-name="table"] .box ,
+    .popup[data-popup-name="product"] .box{
         width: 500px;
     }
 

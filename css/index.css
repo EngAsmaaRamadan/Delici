@@ -1011,16 +1011,17 @@ form textarea.form-control::placeholder{
 
 .popup[data-popup-name="product"].show .box,
 .popup[data-popup-name="table"].show .box{
-	transform: translateY(0px);
+	transform: translateY(0px) translateX(-50%);
 }
 
 .popup[data-popup-name="product"] .box,
 .popup[data-popup-name="table"] .box{
 	width: 600px;
-	background-color: var(--bg-color);
+	background-color: var(--bg-color2);
 	position: absolute;
 	top: 5%;
-	transform: translateY(-110%);
+	left: 50%;
+	transform: translateY(-110%) translateX(-50%);
 	z-index: 300;
 	display: block;
 	transition-duration: 1s;
@@ -1080,7 +1081,7 @@ form textarea.form-control::placeholder{
 	position: absolute;
 	top: 20px;
 	right: 0px;
-	padding: 10px;
+	padding: 9px;
 	background-color: var(--main-color);
 	color: #fff;
 	font-weight: bold;
