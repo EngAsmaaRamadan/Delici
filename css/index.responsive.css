@@ -3,6 +3,18 @@
         padding-inline: 10px;
     }
 
+    .nav-popup .popupBox ul {
+        width: 85%;
+    }
+
+    .nav-popup .popupBox p, .nav-popup .popupBox i {
+        font-size: 14px;
+    }
+    
+    a.phone{
+        font-size: 24px;
+    }
+
 	.collapse:not(.show){
 		display: flex;
 	}
@@ -497,6 +509,18 @@
 @media (min-width: 577px) and (max-width: 1300px) {
 	.title h6 {
         font-size: 17px;
+    }
+
+    .nav-popup.show .popupBox {
+        width: 400px;
+    }
+
+    .nav-popup .popupBox ul {
+        width: 60%;
+    }
+
+    .nav-popup .popupBox a.phone {
+        font-size: 30px;
     }
 
     header #sc_carousel .sc-carousel-item h2 {
