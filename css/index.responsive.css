@@ -794,6 +794,41 @@
 	    display: none;
 	}
 
+    #AboutUs h2 {
+        font-size: 50px;
+    }
+
+    #AboutUs p {
+        width: 35%;
+    }
+
+    #AboutUs .row{
+        position: relative;
+    }
+
+    #AboutUs .row .part:nth-of-type(2){
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    #AboutUs .row .part:first-child{
+        left: 0;
+    }
+
+    #AboutUs .row .part:first-child,
+    #AboutUs .row .part:last-child{
+        position: absolute;
+        top: -20%;
+    }
+
+    #AboutUs .row .part:last-child{
+        right: 0;
+    }
+
+    #AboutUs h3 {
+        font-size: 31px;
+    }
+
     #OurStory img.bg-story {
         width: 350px;
     }
