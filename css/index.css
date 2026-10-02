@@ -373,7 +373,7 @@ header .book-table-button p{
 #OurStory .bg-img .left-img::before{
 	content: "";
 	display: block;
-	width: 40%;
+	width: 150px;
 	height: 95%;
 	background-image: url('../images/pattern-8.svg');
 	background-position: bottom;
