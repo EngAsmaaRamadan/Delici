@@ -925,6 +925,10 @@
 	    width: 160px;
 	}
 
+    #AboutUs h3 {
+        font-size: 32px;
+    }
+
     #OurStory img.bg-story {
         width: 430px;
     }
