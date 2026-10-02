@@ -97,10 +97,6 @@
         font-size: 24px;
     }
 
-    #AboutUs .part .product{
-        width: 300px;
-    }
-
     #AboutUs .part .item ,
     #AboutUs .part:nth-of-type(2) .item{
         margin-inline: 12px;
@@ -147,7 +143,7 @@
 
     #OurStory .bg-img .right-img img {
         top: 5%;
-        right: 8%;
+        right: 4%;
     }
 
     #OurStory .bg-img .left-img {
@@ -711,7 +707,7 @@
     }
 
     #OurStory .bg-img .right-img img {
-        right: 6%;
+        right: 0%;
     }
 
     #OurStory .bg-img .left-img {
@@ -889,7 +885,7 @@
     }
 
     #OurStory .bg-img .right-img img{
-        right: 3%;
+        right: -20%;
         top: 3%;
     }
 
@@ -994,10 +990,11 @@
 
     #OurStory .bg-img .right-img img {
         top: 0%;
+        right: -45%;
     }
 
     #OurStory .bg-img .left-img {
-        bottom: 4%;
+        bottom: 3%;
         left: 1%;
     }
 
