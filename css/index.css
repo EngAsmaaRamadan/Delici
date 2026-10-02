@@ -1250,7 +1250,7 @@ a.phone{
 }
 
 .text-letters{
-	letter-spacing: 5px;
+	letter-spacing: 0px;
 	font-size: 80px;
 }
 
@@ -1277,7 +1277,7 @@ a.phone{
 	animation-name: rotate;
 	animation-direction: alternate;
 	animation-timing-function: linear;
-	animation-duration: 4s;
+	animation-duration: 5s;
 	animation-iteration-count: infinite;
 }
 

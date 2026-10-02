@@ -35,14 +35,13 @@ if(localStorage.getItem('lastActiveProductsType') != null){
 	showProducts(null,'BreakFast');
 }
 
-/*
 window.addEventListener('DOMContentLoaded',function(){
 	loadingPage.classList.add('hide');
 	setTimeout(function(){
 		loadingPage.classList.add('d-none');
 	},5000);
 
-});*/
+});
 
 nextButton.addEventListener('click',function(){
 	let currentSlide = sc_carousel.querySelector('.sc-carousel-item.active'),
