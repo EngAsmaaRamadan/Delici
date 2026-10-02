@@ -480,6 +480,21 @@
         font-size: 14px;
     }
 
+    #AboutUs h2 {
+        font-size: 40px;
+    }
+
+    #AboutUs p {
+        padding-inline: 0;
+        margin: auto;
+        margin-bottom: 40px;
+        width: 70%;
+    }
+
+    #AboutUs h3 {
+        font-size: 27px;
+    }
+
     #OurStory h2 {
         font-size: 40px;
     }
