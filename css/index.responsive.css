@@ -149,7 +149,7 @@
     }
 
     #SpecialDish .part21 .item{
-    	padding-left: 48px;
+    	padding-left: 0;
     }
 
     #SpecialDish .part21{
@@ -162,6 +162,7 @@
 
     #SpecialDish .item-moving{
     	top: 7%;
+        left: 10%;
     }
 
 	#SpecialDish h2 {
@@ -170,8 +171,8 @@
 
 	#SpecialDish p {
 	    font-size: 14px;
-	    padding-right: 64px;
-	    width: initial;
+	    padding-right: 0;
+	    width: 108%;
 	}
 
 	#SpecialDish h5:last-child {
@@ -342,6 +343,14 @@
     #Menu p {
         padding-right: 0px;
         width: 102%;
+    }
+
+    #AboutUs p {
+        width: 100%;
+    }
+
+    .nav-popup.show .popupBox {
+        width: 300px;
     }
 }
 
