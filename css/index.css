@@ -186,6 +186,7 @@ header #sc_carousel .sc-carousel-item:nth-of-type(2){
 header #sc_carousel .sc-carousel-item:nth-of-type(3){
 	background-image: url('../images/slider-3.jpg');
 }
+
 header #sc_carousel .sc-carousel-item h2{
 	font-size: 80px;
 }
@@ -383,6 +384,10 @@ header .book-table-button p{
 
 #AboutUs .row{
     position: relative;
+}
+
+#OurStory .bg-img {
+    width: 350px;
 }
 
 #AboutUs .row .part:nth-of-type(2){

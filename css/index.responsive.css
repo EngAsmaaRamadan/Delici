@@ -1,4 +1,8 @@
 @media (max-width: 1300px) {
+    nav.navbar{
+        padding-inline: 10px;
+    }
+
 	.collapse:not(.show){
 		display: flex;
 	}
@@ -79,6 +83,15 @@
 
     #AboutUs h3{
         font-size: 24px;
+    }
+
+    #AboutUs .part .product{
+        width: 300px;
+    }
+
+    #AboutUs .part .item ,
+    #AboutUs .part:nth-of-type(2) .item{
+        margin-inline: 12px;
     }
 
     #AboutUs .row .part:first-child,
