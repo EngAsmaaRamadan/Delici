@@ -630,6 +630,18 @@
         bottom: 25px;
     }
 
+    #AboutUs p{
+        width: 78%;
+    }
+
+    #AboutUs h3 {
+        font-size: 28px;
+    }
+
+    #AboutUs a {
+        font-size: 14px;
+    }
+
     #OurStory .container .part:last-child{
         display: flex;
         align-items: center;

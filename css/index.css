@@ -363,6 +363,7 @@ header .book-table-button p{
 #AboutUs a{
 	color: var(--main-color);
 	position: relative;
+	letter-spacing: 1px;
 }
 
 #AboutUs .part:nth-of-type(2) .item{
