@@ -364,10 +364,44 @@ header .book-table-button p{
 	color: var(--main-color);
 	position: relative;
 	letter-spacing: 1px;
+	font-size: 15px;
+}
+
+#AboutUs p {
+    width: 35%;
+    margin: auto;
+    margin-bottom: 48px;
+}
+
+#AboutUs .row h3{
+	font-size: 32px;
 }
 
 #AboutUs .part:nth-of-type(2) .item{
 	margin-inline: -15px;
+}
+
+#AboutUs .row{
+    position: relative;
+}
+
+#AboutUs .row .part:nth-of-type(2){
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+#AboutUs .row .part:first-child{
+    left: 0;
+}
+
+#AboutUs .row .part:first-child,
+#AboutUs .row .part:last-child{
+    position: absolute;
+    top: -20%;
+}
+
+#AboutUs .row .part:last-child{
+    right: 0;
 }
 
 #AboutUs .part .product::before,

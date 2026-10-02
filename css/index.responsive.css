@@ -81,6 +81,11 @@
         font-size: 24px;
     }
 
+    #AboutUs .row .part:first-child,
+    #AboutUs .row .part:last-child{
+        position: initial;
+    }
+
     #OurStory .title h6 {
         font-size: 17px;
     }
@@ -420,7 +425,7 @@
         font-size: 35px;
     }
 
-     #OurChefs h4 {
+    #OurChefs h4 {
 	    font-size: 25px;
 	}
 
