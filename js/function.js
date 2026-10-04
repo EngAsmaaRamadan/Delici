@@ -36,81 +36,75 @@ function showProducts(that = null,type){
 			products = Drinks;
 			break;
 	}
-	MenuRow.innerHTML = "";
-	if(isEven(products.length) == true){//the 2 parts have the same number of products//make it more dynamic(dont repeat calling the same function)
-		addPartMenu(products,1,Math.floor(products.length / 2),true,typeName);
-		addPartMenu(products,2,Math.floor(products.length / 2),true,typeName);
-	}else if(isEven(products.length) == false){//the 2 parts doesnt have the same number of products(first part take length/2 +1 from products , part2 take length/2 from products)
-		addPartMenu(products,1,Math.floor(( (products.length - 1) / 2 ) + 1),false,typeName);
-		addPartMenu(products,2,Math.floor(products.length / 2),false,typeName);
+
+	prepareNewProduct(products,typeName);
+	makeActiveThenShow(typeName);
+
+}
+
+
+function makeActiveThenShow(typeName){
+	for(var p = 1 ; p <= 2 ; p++){
+		let productContent = document.querySelector(`.part${p}[data-product-type="${typeName}"] .product-content`);
+		productContent.classList.add('active');
+		setTimeout(function(){
+			productContent.classList.add('show');
+		},500);
 	}
-
-	makeActiveThenShow(1,typeName);//make it more dynamic
-	makeActiveThenShow(2,typeName);
-
 }
 
-function makeActiveThenShow(p,typeName){
-	let productContent = document.querySelector(`.part${p}[data-product-type="${typeName}"] .product-content`);
-	productContent.classList.add('active');
-	setTimeout(function(){
-		productContent.classList.add('show');
-	},500);
+function prepareNewProduct(products,typeName){
+	let numOfProductsInPart,
+		productItem,
+		parts = document.querySelectorAll('#Menu .part .product-content');
+	parts.forEach(function(part){
+		part.innerHTML = "";
+	});
 
-}
-
-function addPartMenu(currentProducts,p,numOfProductsInPart,isEven,typeName){//p = 1 -->col-lg-6 part1 pe-5 , p=2 --> col-lg-6 part2 ps-5 (1 difference)
-	MenuRow.insertAdjacentHTML('beforeend',`
-		<div class="col-md-6 part ${(p == 1) ? 'part1' : 'part2' } " data-product-type="${typeName}">
-			<div class="item product-content">
-			${prepareNewProduct(currentProducts,numOfProductsInPart,p,isEven)}
-			</div>
-		</div>
-		`);//didnt use innerHTML because it remove copy of part1 and add p1 ,p2 so removed show from p1
-}
-
-function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
-	let newRow = '',
-		startIndex = (isEven == true) ? ( (p == 1) ? 0 : Math.floor(numOfProductsInPart ) ) : ( (p == 1) ? 0 : Math.floor(numOfProductsInPart + 1 ) ),
-		endIndex;
-		if(p == 1){
-			endIndex = (isEven == true) ? (productsInPart.length - numOfProductsInPart) : (productsInPart.length - numOfProductsInPart + 1);
-		}else if(p == 2){
-			endIndex = (isEven == true) ? (numOfProductsInPart * 2 ) : (numOfProductsInPart * 2 + 1);
+		if(isEven(products.length)){
+			numOfProductsInPart = products.length / 2;
+		}else{
+			numOfProductsInPart = (products.length / 2) + 1;
 		}
-		for(let i = startIndex ; i < endIndex ; i++){
-				newRow += `
-					<div class="row new-product img-container-parent" data-product-id="${productsInPart[i].id}">
-						<div class="col-3 img-part">
-							<div class="item img-container rounded-4">
-									<i class="fa-regular fa-square-plus open" onclick="showProductsInPopup(this)"></i>
-								<img src="images/${productsInPart[i].images[0]}" alt="${productsInPart[i].images[0]}" class="img-fluid">
-							</div>
-						</div>
-						<div class="col-9 ps-lg-0 text-part">
-							<div class="item py-2">
-								<div class="row">
-									<div class="col-sm-10 col-lg-10 col-md-12 pe-sm-0">
-										<div class="item product-info">
-											<h4>${productsInPart[i].name}</h4>
-											<span class="d-none d-sm-block d-lg-block d-md-none"></span>
-										</div>
-									</div>
-									<div class="col-sm-2 col-lg-2 col-md-12 pe-md-0 ps-lg-0">
-										<div class="item">
-											<h4>$${productsInPart[i].price}</h4>
-										</div>
-									</div>
-								</div>
-								<p class="text-start mb-0">${productsInPart[i].miniDescription}</p>
 
-							</div>
+		products.forEach(function(product,index){
+			if(index < numOfProductsInPart){
+				productItem = document.querySelector('#Menu .part1 .product-content');
+			}else{
+				productItem = document.querySelector('#Menu .part2 .product-content');
+			}
+			console.log(productItem);
+			productItem.parentElement.setAttribute('data-product-type',typeName);
+			productItem.insertAdjacentHTML('beforeend',`
+				<div class="row new-product img-container-parent" data-product-id="${product.id}">
+					<div class="col-3 img-part">
+						<div class="item img-container rounded-4">
+								<i class="fa-regular fa-square-plus open" onclick="showProductsInPopup(this)"></i>
+							<img src="images/${product.images[0]}" alt="${product.images[0]}" class="img-fluid">
 						</div>
 					</div>
-				`;
-			}
-	
-	return newRow;
+					<div class="col-9 ps-lg-0 text-part">
+						<div class="item py-2">
+							<div class="row">
+								<div class="col-sm-10 col-lg-10 col-md-12 pe-sm-0">
+									<div class="item product-info">
+										<h4>${product.name}</h4>
+										<span class="d-none d-sm-block d-lg-block d-md-none"></span>
+									</div>
+								</div>
+								<div class="col-sm-2 col-lg-2 col-md-12 pe-md-0 ps-lg-0">
+									<div class="item">
+										<h4>$${product.price}</h4>
+									</div>
+								</div>
+							</div>
+							<p class="text-start mb-0">${product.miniDescription}</p>
+
+						</div>
+					</div>
+				</div>
+			`);
+		});
 }
 
 function isEven(num){
