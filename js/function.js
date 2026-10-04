@@ -54,7 +54,6 @@ function makeActiveThenShow(p,typeName){
 	let productContent = document.querySelector(`.part${p}[data-product-type="${typeName}"] .product-content`);
 	productContent.classList.add('active');
 	setTimeout(function(){
-		console.log(productContent);
 		productContent.classList.add('show');
 	},1000);
 
@@ -76,42 +75,10 @@ function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
 		endIndex;
 		if(p == 1){
 			endIndex = (isEven == true) ? (productsInPart.length - numOfProductsInPart) : (productsInPart.length - numOfProductsInPart + 1);
-			for(let i = startIndex ; i < endIndex; i++){
-				newRow += `
-					<div class="row new-product img-container-parent" data-product-id="${productsInPart[i].id}">
-						<div class="col-3 img-part">
-							<div class="item img-container rounded-4">
-									<i class="fa-regular fa-square-plus open" onclick="showProductsInPopup(this)"></i>
-								<img src="images/${productsInPart[i].images[0]}" alt="${productsInPart[i].images[0]}" class="img-fluid">
-							</div>
-						</div>
-						<div class="col-9 text-part">
-							<div class="item py-2">
-								<div class="row">
-									<div class="col-sm-10 col-lg-10 col-md-12">
-										<div class="item product-info">
-											<h4>${productsInPart[i].name}</h4>
-											<span class="d-none d-sm-block d-lg-block d-md-none"></span>
-										</div>
-									</div>
-									<div class="col-sm-2 col-lg-2 col-md-12 pe-md-0 ps-lg-0">
-										<div class="item">
-											<h4>$${productsInPart[i].price}</h4>
-										</div>
-									</div>
-								</div>
-								<p class="text-start mb-0">${productsInPart[i].miniDescription}</p>
-
-							</div>
-						</div>
-					</div>
-				`;
-			}
-
 		}else if(p == 2){
-
 			endIndex = (isEven == true) ? (numOfProductsInPart * 2 ) : (numOfProductsInPart * 2 + 1);
-			for(let i = startIndex ; i < endIndex ; i++){
+		}
+		for(let i = startIndex ; i < endIndex ; i++){
 				newRow += `
 					<div class="row new-product img-container-parent" data-product-id="${productsInPart[i].id}">
 						<div class="col-3 img-part">
@@ -142,7 +109,6 @@ function prepareNewProduct(productsInPart,numOfProductsInPart,p,isEven){
 					</div>
 				`;
 			}
-		}
 	
 	return newRow;
 }

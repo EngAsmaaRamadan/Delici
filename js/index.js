@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded',function(){
 	loadingPage.classList.add('hide');
 	setTimeout(function(){
 		loadingPage.classList.add('d-none');
-	},5000);
+	},3000);
 
 });
 
