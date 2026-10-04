@@ -141,14 +141,11 @@
         width: 270px;
     }
 
-    #OurStory .bg-img .right-img img {
-        top: 5%;
-        right: 4%;
-    }
+    
 
     #OurStory .bg-img .left-img {
-        bottom: 5%;
-        left: 6%;
+        bottom: -5%;
+        left: -8%;
     }
 
     #OurStory{
@@ -430,7 +427,7 @@
     }
 
     #OurStory .bg-img .left-img {
-        bottom: 7%;
+        bottom: -5%;
     }
 
     #SpecialDish h2 {
@@ -440,10 +437,6 @@
     #SpecialDish .item-moving {
     	left: 8%;
 	}
-
-	#SpecialDish .part21 .item {
-        padding-left: 60px;
-    }
 
     #SpecialDish p {
         padding-right: 60px;
@@ -692,6 +685,7 @@
     #OurStory .container .part:last-child{
         display: flex;
         align-items: center;
+        justify-content: center;
     }
 
     #OurStory .bg-img .right-img img:last-child, #OurStory .bg-img .right-img img {
@@ -706,13 +700,9 @@
         width: 280px;
     }
 
-    #OurStory .bg-img .right-img img {
-        right: 0%;
-    }
-
     #OurStory .bg-img .left-img {
-        bottom: 5%;
-        left: 5%;
+        bottom: -10%;
+        left: -10%;
     }
 
     #OurStory p.lorem {
@@ -884,11 +874,6 @@
         width: 120px;
     }
 
-    #OurStory .bg-img .right-img img{
-        right: -20%;
-        top: 3%;
-    }
-
     #OurStory .bg-img .left-img img {
         width: 210px;
     }
@@ -986,11 +971,6 @@
 
     #OurStory .bg-img .left-img img {
         width: 250px;
-    }
-
-    #OurStory .bg-img .right-img img {
-        top: 0%;
-        right: -45%;
     }
 
     #OurStory .bg-img .left-img {
