@@ -37,7 +37,7 @@ function showProducts(that = null,type){
 			break;
 	}
 	MenuRow.innerHTML = "";
-	if(isEven(products.length) == true){//the 2 parts have the same number of products
+	if(isEven(products.length) == true){//the 2 parts have the same number of products//make it more dynamic(dont repeat calling the same function)
 		addPartMenu(products,1,Math.floor(products.length / 2),true,typeName);
 		addPartMenu(products,2,Math.floor(products.length / 2),true,typeName);
 	}else if(isEven(products.length) == false){//the 2 parts doesnt have the same number of products(first part take length/2 +1 from products , part2 take length/2 from products)
@@ -45,7 +45,7 @@ function showProducts(that = null,type){
 		addPartMenu(products,2,Math.floor(products.length / 2),false,typeName);
 	}
 
-	makeActiveThenShow(1,typeName);
+	makeActiveThenShow(1,typeName);//make it more dynamic
 	makeActiveThenShow(2,typeName);
 
 }
