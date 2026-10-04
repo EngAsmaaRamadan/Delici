@@ -64,16 +64,16 @@ function prepareNewProduct(products,typeName){
 		if(isEven(products.length)){
 			numOfProductsInPart = products.length / 2;
 		}else{
-			numOfProductsInPart = (products.length / 2) + 1;
+			numOfProductsInPart = Math.floor(products.length / 2) + 1;
 		}
 
 		products.forEach(function(product,index){
+			console.log(index,numOfProductsInPart);
 			if(index < numOfProductsInPart){
 				productItem = document.querySelector('#Menu .part1 .product-content');
 			}else{
 				productItem = document.querySelector('#Menu .part2 .product-content');
 			}
-			console.log(productItem);
 			productItem.parentElement.setAttribute('data-product-type',typeName);
 			productItem.insertAdjacentHTML('beforeend',`
 				<div class="row new-product img-container-parent" data-product-id="${product.id}">
