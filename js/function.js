@@ -46,12 +46,13 @@ function showProducts(that = null,type){
 function makeActiveThenShow(typeName){
 	for(var p = 1 ; p <= 2 ; p++){
 		let productContent = document.querySelector(`.part${p}[data-product-type="${typeName}"] .product-content`);
+		if(productContent.classList.contains('show')){
+			productContent.classList.remove('show');
+		}
 		productContent.classList.add('active');
-		console.log('after active');
 		setTimeout(function(){
 			productContent.classList.add('show');
-			console.log('after show');
-		},1000);
+		},500);
 	}
 }
 
