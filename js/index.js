@@ -75,7 +75,6 @@ window.addEventListener('scroll',function(){
 let navLiEleAnchorsInPopup = document.querySelectorAll('.nav-popup ul.navbar-nav li a');
 	navLiEleAnchorsInPopup.forEach(function(anchor){
 		anchor.addEventListener('click',function(e){
-			console.log(this);
 			let newAnchor = this,
 				currentAnchor = document.querySelector('.nav-popup ul.navbar-nav li a.active');
 			currentAnchor.classList.remove('active');

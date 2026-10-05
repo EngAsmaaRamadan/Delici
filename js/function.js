@@ -232,7 +232,6 @@ function getProductIndex(products,productId){
 function prepareNavLi(navLiEleAnchors){
 	let liElements = "",
 		sections = document.querySelectorAll("header,section");
-console.log(sections);
 	navLiEleAnchors.forEach(function(navLiEleAnchor,index){
 		liElements += `
 			<li class="nav-item">
@@ -257,7 +256,6 @@ function updateNavLink(sectionId){
 			currentNavLink.classList.remove('active');
 		});
 
-		console.log(currentNavLinks[1]);
 		currentNavLinks[1]?.closest('li').querySelector('.square').classList.add('d-none');//? for links in popup
 		navLinksOfSection.forEach(function(navLinkOfSection){
 			navLinkOfSection.classList.add('active');
