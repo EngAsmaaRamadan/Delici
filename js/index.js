@@ -80,9 +80,6 @@ let navLiEleAnchorsInPopup = document.querySelectorAll('.nav-popup ul.navbar-nav
 				currentAnchor = document.querySelector('.nav-popup ul.navbar-nav li a.active');
 			currentAnchor.classList.remove('active');
 			currentAnchor.parentElement.querySelector('.square').classList.add('d-none');
-			// newAnchor.classList.add('active');
-			// newAnchor.parentElement.querySelector('.square').classList.remove('d-none');
-
 		});
 	});
 

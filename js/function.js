@@ -257,7 +257,7 @@ function updateNavLink(sectionId){
 		});
 
 		console.log(currentNavLinks[1]);
-		currentNavLinks[1]?.closest('li').querySelector('.square').classList.add('d-none');
+		currentNavLinks[1]?.closest('li').querySelector('.square').classList.add('d-none');//? for links in popup
 		navLinksOfSection.forEach(function(navLinkOfSection){
 			navLinkOfSection.classList.add('active');
 		});
