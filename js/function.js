@@ -47,9 +47,11 @@ function makeActiveThenShow(typeName){
 	for(var p = 1 ; p <= 2 ; p++){
 		let productContent = document.querySelector(`.part${p}[data-product-type="${typeName}"] .product-content`);
 		productContent.classList.add('active');
+		console.log('after active');
 		setTimeout(function(){
 			productContent.classList.add('show');
-		},500);
+			console.log('after show');
+		},3000);
 	}
 }
 
@@ -68,7 +70,6 @@ function prepareNewProduct(products,typeName){
 		}
 
 		products.forEach(function(product,index){
-			console.log(index,numOfProductsInPart);
 			if(index < numOfProductsInPart){
 				productItem = document.querySelector('#Menu .part1 .product-content');
 			}else{
@@ -228,12 +229,14 @@ function getProductIndex(products,productId){
 }
 
 function prepareNavLi(navLiEleAnchors){
-	let liElements = "";
+	let liElements = "",
+		sections = document.querySelectorAll("header,section");
+console.log(sections);
 	navLiEleAnchors.forEach(function(navLiEleAnchor,index){
 		liElements += `
 			<li class="nav-item">
 				<div class="square ${(index == 0) ? '' : 'd-none'}"></div>
-        		<a class="nav-link ${(index == 0) ? 'active' : ''}" data-anchor-index="${index + 1}" href="${navLiEleAnchor.getAttribute('href')}">${navLiEleAnchor.textContent}</a>
+        		<a class="nav-link ${(index == 0) ? 'active' : ''}" section-name="${sections[index].id}" data-anchor-index="${index + 1}" href="${navLiEleAnchor.getAttribute('href')}">${navLiEleAnchor.textContent}</a>
         	</li>
 		`;
 	});
@@ -248,15 +251,17 @@ function updateNavLink(sectionId){
 		sectionBottom = topOfSection + sectionHeight;
 	if(window.scrollY >= topOfSection && window.scrollY <= sectionBottom){
 		let currentNavLinks = document.querySelectorAll('.nav-link.active'),
-			navLinksOfSection = document.querySelectorAll(`a[href="#${sectionId}"]`);
+			navLinksOfSection = document.querySelectorAll(`a[href="#${sectionId}"],a[section-name = "${sectionId}"]`);
 		currentNavLinks.forEach(function(currentNavLink){
 			currentNavLink.classList.remove('active');
 		});
-		currentNavLinks[1].parentElement.querySelector('.square').classList.add('d-none');
+
+		console.log(currentNavLinks[1]);
+		currentNavLinks[1]?.closest('li').querySelector('.square').classList.add('d-none');
 		navLinksOfSection.forEach(function(navLinkOfSection){
 			navLinkOfSection.classList.add('active');
 		});
-		navLinksOfSection[1].parentElement.querySelector('.square').classList.remove('d-none');
+		navLinksOfSection[1].closest('li').querySelector('.square').classList.remove('d-none');
 	}
 }
 
