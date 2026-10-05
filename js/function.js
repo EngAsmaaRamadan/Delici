@@ -51,7 +51,7 @@ function makeActiveThenShow(typeName){
 		setTimeout(function(){
 			productContent.classList.add('show');
 			console.log('after show');
-		},3000);
+		},1000);
 	}
 }
 
