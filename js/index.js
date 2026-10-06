@@ -90,4 +90,19 @@ popupBoxes.forEach(function(popupBox){
 
 popupTableFormButton.addEventListener('click',function(e){
 	e.preventDefault();
+	if(localStorage.getItem('lastActiveIndex') != null){
+		let productsTypesActiveLi = document.querySelector('ul.productsTypes li.active'),
+			productsTypesCurrentLi = document.querySelector(`ul.productsTypes li[data-tab-index="${JSON.parse(localStorage.getItem('lastActiveIndex'))}"]`);
+		productsTypesActiveLi.classList.remove('active');
+		productsTypesCurrentLi.classList.add('active');
+	}else{
+		localStorage.setItem('lastActiveIndex','0');
+	}
+
+	//update products when reload
+	if(localStorage.getItem('lastActiveProductsType') != null){
+		showProducts(null,JSON.parse(localStorage.getItem('lastActiveProductsType')));
+	}else{
+		showProducts(null,'BreakFast');
+	}
 });
