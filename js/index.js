@@ -16,7 +16,8 @@ let sc_carousel = document.querySelector('#sc_carousel'),
 	products = [],
 	popupProductBox = document.querySelector('.popup[data-popup-name="product"] .box'),
 	popupTableFormButton = document.querySelector('.popup[data-popup-name="table"] form button'),
-	popupProductBody = popupProductBox.querySelector('.body');
+	popupProductBody = popupProductBox.querySelector('.body'),
+	formContactUs = document.querySelector('#ContactUs form');
 
 //update active li
 if(localStorage.getItem('lastActiveIndex') != null){
@@ -88,8 +89,7 @@ popupBoxes.forEach(function(popupBox){
 	});
 });
 
-popupTableFormButton.addEventListener('click',function(e){
-	e.preventDefault();
+formContactUs.addEventListener('submit',function(){
 	if(localStorage.getItem('lastActiveIndex') != null){
 		let productsTypesActiveLi = document.querySelector('ul.productsTypes li.active'),
 			productsTypesCurrentLi = document.querySelector(`ul.productsTypes li[data-tab-index="${JSON.parse(localStorage.getItem('lastActiveIndex'))}"]`);
@@ -105,4 +105,8 @@ popupTableFormButton.addEventListener('click',function(e){
 	}else{
 		showProducts(null,'BreakFast');
 	}
+});
+
+popupTableFormButton.addEventListener('click',function(e){
+	e.preventDefault();
 });
