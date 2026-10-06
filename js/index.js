@@ -20,6 +20,7 @@ let sc_carousel = document.querySelector('#sc_carousel'),
 	formContactUs = document.querySelector('#ContactUs form');
 
 //update active li
+	/*
 if(localStorage.getItem('lastActiveIndex') != null){
 	let productsTypesActiveLi = document.querySelector('ul.productsTypes li.active'),
 		productsTypesCurrentLi = document.querySelector(`ul.productsTypes li[data-tab-index="${JSON.parse(localStorage.getItem('lastActiveIndex'))}"]`);
@@ -35,6 +36,8 @@ if(localStorage.getItem('lastActiveProductsType') != null){
 }else{
 	showProducts(null,'BreakFast');
 }
+*/
+restoreStateFromLocalStorage();
 
 window.addEventListener('DOMContentLoaded',function(){
 	loadingPage.classList.add('hide');
