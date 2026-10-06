@@ -12,28 +12,6 @@ function updateIndicator(newIndicator,currentSlide = null,newSlide = null){
 	newIndicator.classList.add('active');
 }
 
-function restoreStateFromLocalStorage(){
-    let lastActiveIndex = localStorage.getItem('lastActiveIndex');
-    let lastActiveProductsType  = localStorage.getItem('lastActiveProductsType');
-
-    if(lastActiveIndex != null && lastActiveProductsType != null){
-        let activeLi  = document.querySelector('ul.productsTypes li.active');
-        let currentLi = document.querySelector(`ul.productsTypes li[data-tab-index="${JSON.parse(lastActiveIndex)}"]`);
-        if(activeLi != null && currentLi != null){
-            activeLi.classList.remove('active');
-            currentLi.classList.add('active');
-        }
-    } else {
-        localStorage.setItem('lastActiveIndex', '0');
-    }
-
-    if(lastActiveProductsType != null){
-        showProducts(null, JSON.stringify(lastActiveProductsType));
-    } else {
-        showProducts(null, 'BreakFast');
-    }
-}
-
 function updateActive(that){
 	let prevActive = that.closest('ul').querySelector('.active');
 	prevActive.classList.remove('active');

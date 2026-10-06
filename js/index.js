@@ -16,11 +16,9 @@ let sc_carousel = document.querySelector('#sc_carousel'),
 	products = [],
 	popupProductBox = document.querySelector('.popup[data-popup-name="product"] .box'),
 	popupTableFormButton = document.querySelector('.popup[data-popup-name="table"] form button'),
-	popupProductBody = popupProductBox.querySelector('.body'),
-	formContactUs = document.querySelector('#ContactUs form');
+	popupProductBody = popupProductBox.querySelector('.body');
 
 //update active li
-	/*
 if(localStorage.getItem('lastActiveIndex') != null){
 	let productsTypesActiveLi = document.querySelector('ul.productsTypes li.active'),
 		productsTypesCurrentLi = document.querySelector(`ul.productsTypes li[data-tab-index="${JSON.parse(localStorage.getItem('lastActiveIndex'))}"]`);
@@ -36,8 +34,6 @@ if(localStorage.getItem('lastActiveProductsType') != null){
 }else{
 	showProducts(null,'BreakFast');
 }
-*/
-restoreStateFromLocalStorage();
 
 window.addEventListener('DOMContentLoaded',function(){
 	loadingPage.classList.add('hide');
@@ -90,24 +86,6 @@ popupBoxes.forEach(function(popupBox){
 	popupBox.addEventListener('click',function(e){
 		e.stopPropagation();
 	});
-});
-
-formContactUs.addEventListener('submit',function(){
-	if(localStorage.getItem('lastActiveIndex') != null){
-		let productsTypesActiveLi = document.querySelector('ul.productsTypes li.active'),
-			productsTypesCurrentLi = document.querySelector(`ul.productsTypes li[data-tab-index="${JSON.parse(localStorage.getItem('lastActiveIndex'))}"]`);
-		productsTypesActiveLi.classList.remove('active');
-		productsTypesCurrentLi.classList.add('active');
-	}else{
-		localStorage.setItem('lastActiveIndex','0');
-	}
-
-	//update products when reload
-	if(localStorage.getItem('lastActiveProductsType') != null){
-		showProducts(null,JSON.parse(localStorage.getItem('lastActiveProductsType')));
-	}else{
-		showProducts(null,'BreakFast');
-	}
 });
 
 popupTableFormButton.addEventListener('click',function(e){
